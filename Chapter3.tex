@@ -1,4 +1,8 @@
-\chapter{Association mapping reveals the role of mutation-selection balance in the maintenance of genomic variation for gene expression.}
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{2ex}
+
+%\chapter{Association mapping reveals the role of mutation-selection balance in the maintenance of genomic variation for gene expression.}
+\chapter{Mutation-selection balance maintains gene expression variation}
 
 \section{Abstract}
 The evolutionary forces that maintain genetic variation for quantitative traits within populations remain poorly understood. One hypothesis suggests that variation is maintained by a balance between new mutations and their removal by selection and drift. Theory predicts that this mutation-selection balance will result in an excess of low-frequency variants and a negative correlation between minor allele frequency and selection coefficients. Here, we test these predictions using the genetic loci associated with total expression variation (eQTLs) and allele-specific expression variation (aseQTLs) mapped within a single population of the plant \textit{Capsella grandiflora}. In addition to finding eQTLs and aseQTLs for a large fraction of genes, we show that alleles at these loci are rarer than expected and exhibit a negative correlation between phenotypic effect size and frequency. Overall, our results show that the distribution of frequencies and effect sizes of the loci responsible for local expression variation within a single, outcrossing population are consistent with mutation-selection balance.
@@ -27,7 +31,7 @@ If eQTLs act in \textit{cis}, heterozygous eQTLs will cause allele-specific expr
 
 SNPs located near the transcription start site (TSS) and in 5’ UTRs were more likely to be eQTLs and aseQTLs than SNPs further away from the gene (Fig.~\ref{fig:sfig2}A), consistent with data from humans and Drosophila (11, 12, 14). In addition, CNSs near the TSS were enriched for eQTLs and aseQTLs relative to non-conserved sites (Fig.~\ref{fig:sfig2}A), suggesting that genetic variation within CNSs represents a major source of standing variation in gene expression, although bootstrapped confidence limits for these overlap slightly in aseQTLs. In contrast, CNSs in 5’UTRs were not enriched for eQTLs or aseQTLs, consistent with observations that selection strength is relatively similar in conserved and non-conserved sites in these regions(3). However, the detection of a large number of eQTLs outside of conserved regions suggests that regulatory element turnover is common in Brassicaceae (Table S2). There were 2,236 genes that had both eQTLs and aseQTLs, significantly more than expected by chance ($X^{2}$ = 471, p \textless 2.2x10-16). Of these 2,236 genes, 411 had the same SNP most significantly associated both with expression and ASE.
 
-\begin{figure}[h!]
+\begin{figure}[h]
       \centering
        \includegraphics[scale=0.8]{Ch3Fig2}
     \caption{\textbf{eQTL and aseQTL enrichments by site type.} The proportion of SNPs tested in each category that were found to be eQTLs is plotted on the y axis for (a) eQTLs and (b) aseQTLs. The exonic classes were determined by splitting the coding sequence of each gene into 5 equally sized pieces. Note that there were no exonic SNPs included in the aseQTL analysis. Error bars show the 95\% confidence intervals from bootstrapping.}
@@ -38,7 +42,7 @@ Next, we tested eQTLs and aseQTLs for signatures of selection. Purifying selecti
 
 To generate an appropriate null distribution for QTL allele frequency, we permuted assignments between expression level and genotype for every gene 1000 times and ran eQTL analyses using permuted data. On average, 3,258 SNPs were associated with total expression in our permutations, consistent with an FDR of 0.1, since 39,628 SNPs were associated with the observed data. However, observed eQTLs from un-permuted data were significantly rarer than those found in permuted data (mean N=2,047), consistent with the action of purifying selection (Fig.~\ref{fig:3fig3}A). This observation is conservative, because we have not accounted for reduced power to detect associations on rare alleles. We also investigated permuted aseQTLs, and found on average 3,194 SNPs associated with ASE in each permutation, which is slightly more than expected given our FDR of 10\% (26,597 SNPs were associated with ASE in un-permuted data). As with eQTLs, aseQTLs were significantly rarer than those found in permuted data (Fig.~\ref{fig:3fig3}B). These results hold when we designate a random significantly-associated SNP per gene as the eQTL or aseQTL (Fig.~\ref{fig:sfigS4} A,B). In addition, eQTLs and aseQTLs are significantly rarer than permuted eQTLs and aseQTLs when only SNPs 1-5 kb upstream or downstream of genes are considered (Fig.~\ref{fig:sfigS5} A,B), and when sites are separated into high and low recombination sets or by substitution type (Fig.~\ref{fig:sfigS5} C,D). Thus, the frequency distribution of both eQTLs and aseQTLs is consistent with the predominance of mutation-selection balance.
 
-\begin{figure}[h!]
+\begin{figure}[h]
       \centering
        \includegraphics[width=\linewidth]{Ch3Fig3}
     \caption{\textbf{The site frequency spectra of eQTLs and aseQTLs} Minor allele frequencies of (a) eQTLs and (b) aseQTLs for observed data (red circles) and permuted data (gray circles, black lines are 95\% confidence intervals).}
@@ -49,7 +53,7 @@ We incorporated effect sizes to test for an additional signature of selection. T
 
 To avoid variation in power across allele frequency, we repeated the eQTL and aseQTL analysis, down-sampling our population to 50 individuals in each test, such that 40 individuals were drawn from the more common genotype and 10 individuals were drawn from the less common type for each SNP tested. As a consequence, for every SNP we test, sample sizes of major and minor genotype classes are equalized regardless of allele frequency in the population. We also measured effect sizes in this subsample to avoid any relationship between allele frequency and effect size estimation error. Despite reducing our sample size by half, we still detected 594 eQTLs and 670 aseQTLs, when using the most significantly associated SNP per gene (above a p-value threshold corresponding to FDR = 0.1; p \textless 2.6x10$^{-5}$ for eQTLs, p \textless 8.2x10$^{-5}$ for aseQTLs). In addition, we decoupled the identification of associations from the estimation of effect size by comparing allele frequencies of SNPs identified as eQTLs with these SNP’s effects on ASE, avoiding the double-testing issue responsible for winner’s curse.
 
-\begin{figure}[h!]
+\begin{figure}[h]
       \centering
        \includegraphics[width=\linewidth]{Ch3Fig4}
     \caption{\textbf{The relationship between minor allele frequency and effect size.} (a) eQTL minor allele frequency is plotted against the effect of that SNP on ASE, calculated as the mean difference in ASE between individuals heterozygous at the eQTL and individuals homozygous at the eQTL. Negative values occur when the the homozygote for the eQTL has greater ASE than the heterozygote. The trend line is calculated by linear regression (b) aseQTL minor allele frequency plotted against the effect of the aseQTL on total gene expression, calculated by taking the log of the absolute value of the mean difference in expression between individuals heterozygous at the aseQTL and individuals homozygous for the common allele at the aseQTL. The trend line was calculated by regression between minor allele frequency and the log of the expression effect.}
@@ -60,7 +64,7 @@ Consistent with mutation-selection balance, an eQTL’s effect on ASE was negati
 
 We also investigated the allele frequency spectra of the eQTLs and aseQTLs detected using the downsampling approach. In this case it was appropriate to use the frequencies of all SNPs tested as a neutral hypothesis because false positive and false negative rates are independent of minor allele frequency. The minor allele frequencies of the eQTLs and aseQTLs detected with downsampling were rarer than the frequencies of all SNPs tested (Fig. ~\ref{fig:3fig5}). The skew towards rare alleles was stronger here than in the QTLs detected with the whole data set, perhaps because the reduced sample size of the downsampling approach allows us only to detect large effect QTLs, which are likely to be under stronger negative selection. 
 
-\begin{figure}[h!]
+\begin{figure}[h]
       \centering
        \includegraphics[width=\linewidth]{Ch3Fig5}
     \caption{\textbf{The site frequency spectra of QTLs detected in the frequency-controlled subsample. }}
@@ -157,63 +161,63 @@ We thank Niroshini Epitawalage, Amanda Gorton, and Khaled Hazzouri for lab assis
 
 \section{Appendix: Supplementary figures and tables}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS1}
     \caption{\textbf{Linkage disequilibrium in \textit{C. grandiflora}.} Linkage disequilibrium was calculated for all SNPs within 1 kb of each other on scaffold 2. 1\% of these pairs were randomly sampled for the above figure, which shows mean R2 between pairs in 10bp bins.}
     \label{fig:3figS1}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS2}
     \caption{\textbf{The distribution of p values for all SNPs tested in eQTL analyses (a) and aseQTL analyses (b)}}
     \label{fig:3figS2}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS3}
     \caption{\textbf{Example eQTL and aseQTL genes.} Manhattan plots for associations between SNPs and total expression (a and b) and ASE (c and d) for two genes, PAC:20895445 (a and c) and PAC:20904926 (b and d). Each black dot represents a SNP and is plotted by genomic position on the x axis and the negative log of the p value for association on the y axis. The gray line denotes the p value threshold corresponding to an FDR of 0.01. The gray boxes represent the exons of the gene. Note that PAC:20895445 is an ortholog of AT4G16250.1, PHYTOCHROME D and PAC:20904926 is an ortholog of ATG68185.1, a ubiquitin-like superfamily protein.}
     \label{fig:3figS3}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS4}
     \caption{\textbf{The effect of designating a random associated SNP per gene as eQTL/aseQTL instead of the most associated SNP per gene.} The site frequency spectrum of eQTLs (a) and aseQTLs (b) for observed data (red circles) and permuted data (gray circles, black lines are 95\% confidence intervals) when a random SNP is chosen per gene to be an eQTL or aseQTL. The same eQTLs and aseQTLs are plotted in (c) and (d). In (c), eQTL minor allele frequency is plotted against the effect of that SNP on ASE, calculated as the mean difference in ASE between individuals heterozygous at the eQTL and individuals homozygous at the eQTL. Negative values occur when the the homozygote for the eQTL has greater ASE than the heterozygote. The black line is calculated by linear regression. In (d), aseQTL minor allele frequency plotted against the effect of the aseQTL on total gene expression, calculated by taking the log of the absolute value of the mean difference in expression between individuals heterozygous at the aseQTL and individuals homozygous for the common allele at the aseQTL. The trend line was calculated by regression between minor allele frequency and the log of the expression effect. }
     \label{fig:3figS4}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS5}
     \caption{\textbf{Tajima’s D of eQTLs and aseQTLs within site type, recombination rate, and substitution type.}(a) shows Tajima’s D for eQTLs of various categories. Red circles are the real data, gray circles show Tajima’s D for permuted eQTLs, and black lines show 95\% confidence intervals. Tajima’s D was used to summarize the site frequency spectra and make plots more readable than they would be if raw frequencies were plotted. The total number of eQTLs in each category is shown with the red numbers and the mean number of permuted eQTLs in each category is shown with the black numbers (b) shows the same data as (a) but for aseQTLs. (c) shows Tajima’s D for eQTLs and aseQTLs (red dots) and permuted eQTLs and aseQTLs (gray dots, black bars are 95\% confidence intervals) for sites in low recombination regions (\textless 3.45 cM/mB) and high recombination regions (\textgreater 3.45 cM/mB). (d) shows Tajima’s D for A/T to G/C substitutions that could be favored by gene conversion (‘conv’) and other substitutions (‘notconv’). Note that all Tajima’s D values are significantly increased because only SNPS above a certain allele frequency were testable, so that even for 4\-fold degenerate sites in the analysis, Tajima’s D is 2.403.}
     \label{fig:3figS5}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS6}
     \caption{\textbf{A comparison of mapping programs in highly polymorphic regions.}RNAseq coverage for an example gene using mapping from Tophat (top) and Stampy (bottom). Colored lines indicate polymorphic sites compared to the reference. The arrows indicate regions where coverage was reduced in Tophat because of multiple polymorphisms. Note that Tophat reads have splice junctions while Stampy reads do not because we mapped to an exon-only reference.}
     \label{fig:3figS6}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS7}
     \caption{\textbf{GC composition and expression by lane.} All genes included in the study were split into 20 equally sized bins by GC content. Expression in these bins was combined for each lane and plotted in box plots.}
     \label{fig:3figS7}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS8}
     \caption{\textbf{The effect of increasing the number of SNPs required to measure ASE effects aseQTL detection.} The minor allele frequency of aseQTLs detected when ASE measurement required 1 heterozygous coding SNP (circles), 2 SNPs (triangles), and 3 SNPs (squares). While increasing the numbers of SNPs required to measure ASE reduced the number of aseQTLs detected, it did not qualitatively change our conclusions about the rareness of aseQTLs.}
     \label{fig:3figS8}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS9}
     \caption{\textbf{The site frequency spectrum of aseQTLs when genes with SNPs showing ASE bias are removed from the analysis.} Red dots are frequencies of aseQTLs, gray dots are frequencies for permuted aseQTLs and black lines show 95\% confidence intervals. }

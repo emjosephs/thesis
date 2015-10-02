@@ -248,7 +248,6 @@
 %% All other options are passed to the base class directly.
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 
-
 %%%%%%%%%%%%       OPTION EXECUTION       %%%%%%%%%%%%
 
 %% Default settings: standard options followed by ut-thesis options.
