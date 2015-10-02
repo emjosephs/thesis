@@ -11,16 +11,16 @@ One key question concerns the extent to which both positive and negative selecti
 Comparing these results to noncoding selection across plant genomes is of particular interest because it has been hypothesized that in plants, regulatory evolution may occur more often through gene duplication than cis-regulatory change [13], possibly leading to lower levels of functional constraint and positive selection on plant noncoding DNA. Consistent with this prediction, Haudry and colleagues [14] recently compared the genomes of nine Brassicaceae species, and showed that approximately one quarter of the conserved sites in the Arabidopsis thaliana genome were in noncoding regions, a much smaller fraction than found to date in studies of vertebrates and Drosophila. However, the strength of selection on these noncoding sites, the extent of species-specific selection in noncoding regions, and the extent of positive selection in noncoding regions compared with coding regions have not been quantified. 
 While the strength of selection is expected to vary between coding and noncoding sequence, it also varies between genes. Gene expression level is one of the major determinants of rates of nonsynonymous evolution in coding regions in many species [15-17], including plants [18-21]. Variation in the strength of selection on genes could reflect differences in the relative importance of gene products for organism fitness, or it may simply relate to inherent properties of expression [22]. For example, deleterious mutations that cause misfolding or mis-interaction have more opportunity to interfere with cellular function when they occur in high expression genes [23-25]. Regardless of the underlying selective mechanisms, the negative correlation between expression level and nonsynonymous divergence could reflect relaxed purifying selection in lowly expressed genes, increased positive selection in lowly expressed genes, or both.
 
-Here, we use population genomics to quantify the strength of both positive and negative selection inside and outside of coding regions and within highly and lowly expressed genes in a species-wide sample of 13 outbred \textit{Capsella grandiflora} individuals. \textit{C. grandiflora} is an obligately outcrossing member of the Brassicaceae family with a large effective population size (Ne \~ 600,000) and relatively low population structure [26,27]. We estimate the strength of negative selection by fitting polymorphism data to a model of the distribution of negative fitness effects of mutations. We then quantify the contribution of positive selection to divergence in \textit{C. grandiflora} using two complementary approaches: an extension of the McDonald-Kreitman test [28] and an analysis of neutral variation linked to lineage-specific fixed substitutions [29]. Our results demonstrate that both positive and negative selection are pervasive in coding regions, 5’ and 3’ untranslated regions (UTRs), and constrained noncoding regions of the \textit{C. grandiflora} genome, but also that a large proportion of noncoding DNA may evolve neutrally. In addition, we find stronger negative selection in high expression genes compared to low expression genes, suggesting that differences in negative selection drive differences in rates of molecular evolution.
+Here, we use population genomics to quantify the strength of both positive and negative selection inside and outside of coding regions and within highly and lowly expressed genes in a species-wide sample of 13 outbred \textit{Capsella grandiflora} individuals. \textit{C. grandiflora} is an obligately outcrossing member of the Brassicaceae family with a large effective population size (Ne $\sim$ 600,000) and relatively low population structure [26,27]. We estimate the strength of negative selection by fitting polymorphism data to a model of the distribution of negative fitness effects of mutations. We then quantify the contribution of positive selection to divergence in \textit{C. grandiflora} using two complementary approaches: an extension of the McDonald-Kreitman test [28] and an analysis of neutral variation linked to lineage-specific fixed substitutions [29]. Our results demonstrate that both positive and negative selection are pervasive in coding regions, 5’ and 3’ untranslated regions (UTRs), and constrained noncoding regions of the \textit{C. grandiflora} genome, but also that a large proportion of noncoding DNA may evolve neutrally. In addition, we find stronger negative selection in high expression genes compared to low expression genes, suggesting that differences in negative selection drive differences in rates of molecular evolution.
 
 \section{Results}
 \subsection{Genome-wide patterns of polymorphism}
 
-We sequenced 13 outbred \textit{C. grandiflora} individuals (26 sampled haploid chromosomes; ~140 Mb genome assembly) sampled from across the species' range in northern Greece using single-end Illumina GAII sequencing (Table S1). The resulting 108 bp reads were mapped to the \textit{Capsella rubella} reference genome [30] using the Stampy aligner resulting in a median coverage of 34 reads per sample per site. Genotypes were called using the Genome Analysis Toolkit’s Unified Genotyper [31]. After filtering for quality and depth (see Methods), we were left with $\sim$27 million sites, $\sim$1.5 million of which were single nucleotide polymorphisms (SNPs) (Table S2). Sites from across the genome were identified as 0-fold degenerate, 4-fold degenerate, intronic, 5’ UTR, 3’ UTR, or intergenic, based on the annotation of the \textit{C. rubella} reference genome [30]. To avoid comparing sites that do not have equivalent mutation profiles, we excluded sites in coding regions that were neither 4-fold nor 0-fold degenerate. After filtering, our analysis includes 30-40\% of coding and noncoding sites, except in intergenic regions where only approximately 10\% of sites are retained due to the higher repeat content in these regions and the removal of highly repetitive pericentromeric DNA (Fig.~\ref{fig:figS1}). 
+We sequenced 13 outbred \textit{C. grandiflora} individuals (26 sampled haploid chromosomes; $\sim$140 Mb genome assembly) sampled from across the species' range in northern Greece using single-end Illumina GAII sequencing (Table S1). The resulting 108 bp reads were mapped to the \textit{Capsella rubella} reference genome [30] using the Stampy aligner resulting in a median coverage of 34 reads per sample per site. Genotypes were called using the Genome Analysis Toolkit’s Unified Genotyper [31]. After filtering for quality and depth (see Methods), we were left with $\sim$27 million sites, $\sim$1.5 million of which were single nucleotide polymorphisms (SNPs) (Table S2). Sites from across the genome were identified as 0-fold degenerate, 4-fold degenerate, intronic, 5’ UTR, 3’ UTR, or intergenic, based on the annotation of the \textit{C. rubella} reference genome [30]. To avoid comparing sites that do not have equivalent mutation profiles, we excluded sites in coding regions that were neither 4-fold nor 0-fold degenerate. After filtering, our analysis includes 30-40\% of coding and noncoding sites, except in intergenic regions where only approximately 10\% of sites are retained due to the higher repeat content in these regions and the removal of highly repetitive pericentromeric DNA (Fig.~\ref{fig:figS1}). 
 
 Consistent with previous estimates made using a much smaller set of loci (257 Sanger-sequenced loci) and a different range-wide sample [32], average nucleotide diversity at 4-fold degenerate sites (Watterson’s $\theta_{w}$) was 0.022 and there was evidence for an excess of rare variants genome-wide at 4-fold degenerate sites compared with the standard neutral model (Tajima’s D = -0.512). Introns ($\theta_{w}$= 0.020) and intergenic regions ($\theta_{w}$ = 0.019) showed only slightly lower levels of nucleotide diversity than 4-fold degenerate sites, suggesting that the large majority of sites in these regions are effectively neutral, or subject to comparable levels of purifying selection as 4-fold degenerate sites. 5’ and 3’ UTRs showed a much stronger diversity reduction ($\theta_{w}$= 0.015 and 0.014 respectively), while 0-fold degenerate nonsynonymous sites showed the strongest reduction ($\theta_{w}$ = 0.005).
 
-Neutral diversity at 4-fold degenerate sites near centromeric regions was elevated on most chromosomes, similar to observations made in \textit{A. thaliana} [33], \textit{Arabidopsis lyrata} [34,35] and \textit{Medicago truncatula} [36], (Fig.~\ref{fig:figS2}. As with these other species, this effect is not obviously caused by higher mutation rates, since divergence between Capsella and Neslia is not clearly elevated in these regions (Fig.~\ref{fig:figS2}.. Although elevated error rates in repetitive regions may contribute to high diversity, our observation of high diversity in these regions is still apparent after extensive filtering (see Methods). This increase in neutral diversity in pericentromeric regions may reflect a weakening of background selection in regions of low gene density, as recently shown in models of background selection applied to Arabidopsis [37].  Furthermore, diversity generally declines towards the ends of the chromosomes, potentially reflecting the stronger effects of background selection and/or selective sweeps in regions of relatively low recombination but high gene density, where the effects of linked selection are expected to be strongest. Consistent with these interpretations, we see an increase in diversity in regions of low coding density (Fig.~\ref{fig:figS3}.
+Neutral diversity at 4-fold degenerate sites near centromeric regions was elevated on most chromosomes, similar to observations made in \textit{A. thaliana} [33], \textit{Arabidopsis lyrata} [34,35] and \textit{Medicago truncatula} [36], (Fig.~\ref{fig:figS2)}. As with these other species, this effect is not obviously caused by higher mutation rates, since divergence between Capsella and Neslia is not clearly elevated in these regions (Fig.~\ref{fig:figS2}). Although elevated error rates in repetitive regions may contribute to high diversity, our observation of high diversity in these regions is still apparent after extensive filtering (see Methods). This increase in neutral diversity in pericentromeric regions may reflect a weakening of background selection in regions of low gene density, as recently shown in models of background selection applied to Arabidopsis [37].  Furthermore, diversity generally declines towards the ends of the chromosomes, potentially reflecting the stronger effects of background selection and/or selective sweeps in regions of relatively low recombination but high gene density, where the effects of linked selection are expected to be strongest. Consistent with these interpretations, we see an increase in diversity in regions of low coding density (Fig.~\ref{fig:figS3}).
 
 We also examined individual heterozygosity in sliding windows along each chromosome. A number of individuals showed large stretches of homozygosity indicative of biparental inbreeding (Fig~\ref{fig:figS4} and Fig.~\ref{fig:figS5}). Consistent with these regions reflecting local biparental inbreeding, no such regions are found in our sample that is derived from a between-population cross, called AXE. These regions of identity-by-descent (IBD) in our data highlight that, despite being self-incompatible and obligately outcrossing, local biparental inbreeding can still generate excess homozygosity in stretches across the genome. To avoid biased estimation of species-wide allele frequencies in these regions, we subsampled the data to treat all IBD regions as haploid rather than diploid sequence for the purposes of allele frequency estimation, although treating these regions as diploid does not qualitatively change our conclusions (Fig.~\ref{fig:figS6}).
 
@@ -38,13 +38,13 @@ Genome-wide, we estimate that the proportion of intergenic sites that are nearly
 
 Although our analysis suggests very low levels of purifying selection in noncoding regions other than UTRs and splice junctions, these global analyses may miss signatures of purifying selection on a small proportion of noncoding sites. One candidate set of sites that may have different signatures of selection are conserved noncoding sequences (CNSs); these are regions that show evidence of cross-species conservation, and are therefore prime candidates for functional noncoding sequences subject to selection. We identified CNSs across nine Brassicaceae genomes, following the implementation in Haudry et al. [14]. For this study, we used the Capsella genome as a reference for alignment, but excluded Capsella when identifying CNSs in order to avoid circularity when quantifying selection from diversity [8]. This method allows our analysis of selection on noncoding sites using polymorphism to be more independent of the comparative analysis. When we look at only these conserved regions in our C. grandiflora sample we see a small proportion of effectively neutral sites (28\%) compared to the noncoding regions as whole, suggesting that the majority of CNS sequences are subject to purifying selection (Fig.~\ref{fig:fig1}A). However, estimates suggest that CNSs are generally under weaker purifying selection than nonsynonymous (0-fold) sites and experience primarily weak and intermediate purifying selection (Fig.~\ref{fig:fig1}A). 
 
-Although CNSs as a whole retain a considerable proportion of effectively neutral sites, it is of interest to examine whether particular classes of CNS show stronger selection. To examine differences between categories we quantified selection on the different types of CNSs separately (Fig.~\ref{fig:figS7}). In most categories, about 25\% of sites are nearly neutral, a slightly stronger signal of purifying selection than when we pool all CNSs. Intronic CNSs have a larger proportion of effectively neutral sites than other categories, in agreement with the general neutrality of intronic sites (Fig.~\ref{fig:fig1}). In contrast, small noncoding RNAs (sncCNSs) have a stronger signal of selection than the other CNS categories. However, the number of sites used to make the AFS for each of these categories varies substantially (Table S2), and our sample of sncCNSs has very little polymorphism (155 segregating sites). Nevertheless, despite the wide confidence intervals, sncCNSs still show a significantly (p < 0.001) smaller fraction of sites that are nearly neutral (Nes < 1) than the pooled CNSs, which could be due to strong selection for sequence specificity to obtain the proper secondary structure important for RNA activity [38]. This effect is consistent with sncCNSs showing a higher degree of conservation across the Brassicaceae [14] and having traceable orthologs in other plants.
+Although CNSs as a whole retain a considerable proportion of effectively neutral sites, it is of interest to examine whether particular classes of CNS show stronger selection. To examine differences between categories we quantified selection on the different types of CNSs separately (Fig.~\ref{fig:figS7}). In most categories, about 25\% of sites are nearly neutral, a slightly stronger signal of purifying selection than when we pool all CNSs. Intronic CNSs have a larger proportion of effectively neutral sites than other categories, in agreement with the general neutrality of intronic sites (Fig.~\ref{fig:fig1}). In contrast, small noncoding RNAs (sncCNSs) have a stronger signal of selection than the other CNS categories. However, the number of sites used to make the AFS for each of these categories varies substantially (Table S2), and our sample of sncCNSs has very little polymorphism (155 segregating sites). Nevertheless, despite the wide confidence intervals, sncCNSs still show a significantly (p \textless 0.001) smaller fraction of sites that are nearly neutral (Nes \textless 1) than the pooled CNSs, which could be due to strong selection for sequence specificity to obtain the proper secondary structure important for RNA activity [38]. This effect is consistent with sncCNSs showing a higher degree of conservation across the Brassicaceae [14] and having traceable orthologs in other plants.
 
 
 \subsection{Genome-wide estimates of positive selection} 
 We used the approach of Eyre-Walker and Keightley [28] to estimate the proportion of fixations driven by positive selection ($\alpha$) and the rate of positive selection ($\omega$) while taking into account the effect of slightly deleterious mutations, which can bias estimates of positive selection downwards. To do this, we estimated divergence using whole genome alignments of \textit{C. rubella}, \textit{A. thaliana}, and \textit{Neslia paniculata} (estimate of 4-fold synonymous divergence $K_{s}$ between \textit{C. rubella} and \textit{N. paniculata} is $K_{s}$=0.14). Because the large majority of noncoding sites are estimated to be effectively neutral, and because of alignment concerns between species in unconstrained noncoding regions, we focus our estimates of positive selection on 0-fold degenerate sites, CNS sites, and UTRs. We found that 0-fold degenerate sites show a very high proportion of divergence driven by positive selection  (Fig.~\ref{fig:fig1}B; $\alpha$ = 0.417) and estimates of the rate of adaptive substitution relative to synonymous substitution (Fig.~\ref{fig:fig1}C ; $\omega$ = 0.08). Similarly, UTRs and CNS sites show evidence for positive selection (Fig.~\ref{fig:fig1}B,C). These results generally suggest widespread positive selection in both nonsynonymous and functional noncoding genomic regions.
 
-\begin{figure}[h!]
+\begin{figure}[h]
       \centering
        \includegraphics{Ch2Fig2}
     \caption{\textbf{Linked neutral diversity and divergence as a function of distance from fixed substitutions across the \textit{C. grandiflora genome}.} A) Diversity at 4-fold degenerate sites, B) Divergence at 4-fold degenerate sites, and C) Diversity/divergence at 4-fold degenerate sites. In all figures, black lines represent measures surrounding fixed replacement substitutions and gray shading represents 95\% confidence intervals, from bootstrapping, surrounding silent substitutions.).}
@@ -55,7 +55,7 @@ If many of the amino acid changes between textit{C. grandiflora} and its nearest
 
 Patterns of diversity may be distorted by elevated mutation rates surrounding substitutions [39], which would increase diversity and divergence in \textit{C. grandiflora}. Consistent with this prediction, divergence at 4-fold degenerate sites ('4-fold divergence') is elevated around synonymous and replacement substitutions (Fig.~\ref{fig:fig2}B). To control for elevated mutation rate, we divided diversity by divergence at 4-fold degenerate sites (subsequently referred to as '4-fold diversity/divergence'). We observed a reduction in 4-fold diversity/divergence around replacement substitutions compared to silent substitutions, demonstrating that the signature of recurrent sweeps is not an artifact caused by variation in mutation rate (Fig.~\ref{fig:fig2}C, p \textless  0.01 for 1 kb on either side of the substitution).
 
-\begin{figure}[h!]
+\begin{figure}[h]
       \centering
        \includegraphics{Ch2Fig3}
     \caption{\textbf{Linked neutral diversity/divergence surrounding conserved noncoding sequences (CNSs).} Diversity/divergence at 4-fold degenerate sites as a function of distance from fixed substitutions in CNSs (black lines) and fixed substitutions in non-conserved intergenic sequence (gray shading, 95\% confidence interval).
@@ -284,86 +284,147 @@ ates in the model legume Medicago truncatula. Mol Ecol 22: 3525–3538. doi:10.1
 
 \section{Appendix: Supplementary figures and tables}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch2FigS1}
     \caption{\textbf{Coverage after filtering, across the genome.} A) The number of annotated sites in each category across the genome (light grey), and the number of sites that pass our filters and were used in analysis (dark grey). B) Proportion of sites that pass filters, calculated in 200kb windows, as a function of genomic position.}
     \label{fig:figS1}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch2FigS2.pdf}
     \caption{\textbf{Pairwise diversity and divergence at 4-fold degenerate sites across the entire genome.} Statistics were calculated in windows of 5,000 SNPs. Individual lines alternating between grey and blue represent chromosomes. The location of the centromere on each chromosome is indicated by the grey box along the x-axis.}
     \label{fig:figS2}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch2FigS3}
     \caption{\textbf{Coding density versus 4-fold degenerate diversity across the genome.} Each point represents one 10 kb window. Black points represent windows that do not overlap centromeres while grey points represent windows that do overlap centromeres. There is a slight negative correlation between diversity and coding density both with and without centromeric windows}
     \label{fig:figS3}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[scale=0.1]{Ch2FigS4}
     \caption{\textbf{Regions of identity by descent in each sample.} The ratio of heterozygous to homozygous calls at sites that are polymorphic across individuals (in 200kb windows) plotted against position across the genome. Each sample is plotted separately and identified by sampled IDs. Individual lines alternating between grey and blue represent chromosomes. Regions of IBD were defined as windows where FIS was greater than 0.5 and are indicated by black lines along the x-axis. At most 3 regions of IBD overlap across all individuals. This occurs near the end of chromosome 1.}
     \label{fig:figS4}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[scale=0.1]{Ch2FigS5}
     \caption{\textbf{FIS in windows across the genome in each sample.} FIS in 200kb windows is plotted across the genome. Each sample is plotted separately and identified by sample IDs. Individual lines alternating between grey and blue represent chromosomes. Regions of IBD were defined as windows where FIS was greater than 0.5 and are indicated by black lines along the 0 line of the y-axis.}
     \label{fig:figS5}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch2FigS6}
     \caption{\textbf{DFE-alpha results using all alleles, including IBD regions.} The distribution of fitness effects for 0-fold degenerate, 3’ and 5’ UTR, intronic, and intergenic sites are shown. For this analysis the genotyping calls were filtered as described in the methods, but the data was not downsampled in regions of IBD identified in Fig.~\ref{fig:figS4}.}
     \label{fig:figS6}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch2FigS7}
     \caption{\textbf{Estimates of positive and negative selection on different categories of CNSs.} A) Distribution of fitness effects. Stars indicate categories in which the fraction of nearly neutral sites was significantly different from the pooled sets of CNSs by a randomization test. B) $\alpha$ and C) $\omega$ for each category. Error bars indicate 95\% CIs from 200 bootstraps.}
     \label{fig:figS7}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch2FigS8}
     \caption{\textbf{Robustness of sweep analysis to different window sizes.} This panel shows the results of our scans for recurrent selective sweeps using alternative window sizes: 500bp on left and 2kb on right. Otherwise, the methods are the same as described previously.}
     \label{fig:figS8}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch2FigS9}
     \caption{\textbf{Additional diversity and divergence data for sweeps around substitutions in conserved noncoding regions.} The left panels show diversity at 4-fold degenerate sites and divergence at 4-fold degenerate sites around substitutions in conserved non-coding sequence (black lines) and non-conserved intergenic sequence (gray shading represents 95\% confidence intervals). The right panels show the same information for diversity and divergence at 4-fold degenerate sites around conserved noncoding sequences containing fixed substitutions (black lines) and conserved noncoding sequences without fixed substitutions (gray shading represents 95\% confidence intervals).}
     \label{fig:figS9}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch2FigS10}
     \caption{\textbf{Allele frequency spectra of replacement sites in genes with different expression levels.}}
     \label{fig:figS10}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch2FigS11}
     \caption{\textbf{Estimates of negative and positive selection on 0-fold sites in genes of varying expression level.} Data from this figure was generated using the divergence estimates from the whole genome alignments (as in Fig.~\ref{fig:fig1}) rather than divergence from PAML estimates (as in Fig.~\ref{fig:fig4}). Here AFS from 0-fold sites were compared to 4-fold sites, rather than non-synonymous to synonymous sites as in Fig.~\ref{fig:fig4}. A) The proportion of sites found in each bin of purifying selection strength, separated by expression level. B) The proportion of divergent sites fixed by positive selection and C) The rate of adaptive substitution relative to neutral divergence. Error bars represent 95\% bootstrap confidence intervals.}
     \label{fig:figS11}
 \end{figure}
 
-Table S1
-Sampling locations of each sample.
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|l |l l l|} 
+ \hline
+ Accession & Latitude & Longitude & \# of BP sequenced \\ [0.5ex] 
+ \hline
+94.12	& 39.9597433333	& 20.7239333333	& 12360821508 \\
+83.17	& 38.4379	& 21.4243166667	& 7284286908 \\
+85.33	& 39.5552166667	& 20.9164166667	& 613454040 \\
+AxE	& NA	& NA	& 9941039172 \\
+918/8	& 39.75	& 19.8666666667	& 0 \\
+Cg2e	& 39.67175	& 19.7010166667	& 0 \\
+103.17	& 39.5183833333	& 21.5609166667	& 9999942588 \\
+5a	& 39.705025	& 19.757344	& 10451874852 \\
+91.23	& 39.86715	& 20.7070833333	& 12208550040 \\
+93.23	& 39.9644833333	& 20.71075	& 11152774332 \\
+95.15	& 39.1454166667	& 20.0581666667	& 7295444172 \\
+86.8	& 39.0172333333	& 20.1319333333	& 10473071796 \\
+88.56	& 39.0511833333	& 20.0666333333	& 6991120692 \\
+97.26	& 39.1164833333	& 21.1562166667	& 10100482488 \\
+98	& 38.0313166667	& 20.1539666667	& 6553236744 \\ [1ex] 
+ \hline
+\end{tabular}
+\caption{\textbf{Sampling locations of each individual.} Note that individual AxE is a cross between 918/8 and Cg2e}
+\label{table:s1}
+\end{table}
+
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|l |l l |l l l l l|} 
+\hline
+ &\multicolumn{2}{|c|}{Positive selection} & \multicolumn{4}{|c|}{Distribution of fitness effects} \\ [0.5ex]
+\hline
+Site type & $\alpha$& 	$\omega$& 		0-1& 	1-10& 	10-100& 	100-Inf \\ [0.5ex]
+ \hline
+0fold& 	0.417391& 	0.083841& 	0.136569& 	0.152498& 	0.303932& 	0.407\\
+3utr& 	0.276083& 	0.150881& 		0.453332& 	0.33022& 	0.213531& 	0.002917\\
+5utr& 	0.393226& 	0.251128& 		0.45836& 	0.417524& 	0.124102& 	0.000014\\
+intergenic& 	NA& 	NA& 		0.999702& 	0.000298& 	0& 	0\\
+intronic& 	NA& 	NA& 		0.698462& 	0.30153& 	0.000008& 	0\\
+2/3 fold& 	0.173876& 	0.122638& 		0.611852& 	0.120999& 	0.139095& 	0.128055\\
+CNS& 	0.545225& 	0.279022& 		0.275543& 	0.342483& 	0.363507& 	0.018467\\
+\hline							
+3UTRcns	0.517609& 	0.255635& 		0.281223& 	0.332566& 	0.363655& 	0.022556\\
+DownstreamCNS& 	0.526032& 	0.225976& 		0.248254& 	0.434956& 	0.31525& 	0.001541\\
+5UTRcns& 	0.424353& 	0.157474& 		0.253091& 	0.319996& 	0.39247& 	0.034442\\
+UpstreamCNS& 	0.530125& 	0.224175& 		0.239224& 	0.366778& 	0.381506& 	0.012493\\
+intronicCNS& 	0.50238& 	0.372934& 		0.41499& 	0.256174& 	0.28281& 	0.046026\\
+IntergenicCNS& 	0.579499& 	0.255211& 		0.225545& 	0.401574& 	0.367618& 	0.005262\\
+sncCNS& 	0.705816& 	0.174081& 		0.089996& 	0.38704& 	0.517114& 	0.00585\\
+AmbiguousCNS& 	0.399807& 	0.158877& 		0.284093& 	0.368947& 	0.338238& 	0.008722\\
+\hline							
+High expression& 	0.641085& 	0.107721& 		0.069669& 	0.066187& 	0.128722& 	0.735421\\
+Mid-high expression& 	0.60684& 	0.122296& 		0.092334& 	0.099879& 	0.204814& 	0.602973\\
+Mid-low expression& 	0.5052& 	0.11113& 		0.125454& 	0.11427& 	0.214865& 	0.545411\\
+Low expression& 	0.504903& 	0.124287& 		0.14065& 	0.1352& 	0.256773& 	0.467376\\ [0.5ex] 
+ \hline
+\end{tabular}
+\caption{\textbf{DFE-alpha model outputs for each site category}}
+\label{table:s2}
+\end{table}
 
 Table S2
-Allele frequency spectra, summary of diversity statistics, and DFE-alpha model parameters for each site category. 
+
 
