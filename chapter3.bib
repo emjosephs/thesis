@@ -77,6 +77,52 @@
   year        =  2009
 }
 
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@ARTICLE{DePristo2011-jc,
+  title       = "A framework for variation discovery and genotyping using
+                 next-generation {DNA} sequencing data",
+  author      = "DePristo, Mark A and Banks, Eric and Poplin, Ryan and
+                 Garimella, Kiran V and Maguire, Jared R and Hartl, Christopher
+                 and Philippakis, Anthony A and del Angel, Guillermo and Rivas,
+                 Manuel A and Hanna, Matt and McKenna, Aaron and Fennell, Tim J
+                 and Kernytsky, Andrew M and Sivachenko, Andrey Y and
+                 Cibulskis, Kristian and Gabriel, Stacey B and Altshuler, David
+                 and Daly, Mark J",
+  affiliation = "Program in Medical and Population Genetics, Broad Institute of
+                 Harvard and MIT, Cambridge, Massachusetts, USA.
+                 depristo@broadinstitute.org",
+  abstract    = "Recent advances in sequencing technology make it possible to
+                 comprehensively catalog genetic variation in population
+                 samples, creating a foundation for understanding human
+                 disease, ancestry and evolution. The amounts of raw data
+                 produced are prodigious, and many computational steps are
+                 required to translate this output into high-quality variant
+                 calls. We present a unified analytic framework to discover and
+                 genotype variation among multiple samples simultaneously that
+                 achieves sensitive and specific results across five sequencing
+                 technologies and three distinct, canonical experimental
+                 designs. Our process includes (i) initial read mapping; (ii)
+                 local realignment around indels; (iii) base quality score
+                 recalibration; (iv) SNP discovery and genotyping to find all
+                 potential variants; and (v) machine learning to separate true
+                 segregating variation from machine artifacts common to
+                 next-generation sequencing technologies. We here discuss the
+                 application of these tools, instantiated in the Genome
+                 Analysis Toolkit, to deep whole-genome, whole-exome capture
+                 and multi-sample low-pass (∼4\texttimes{}{}) 1000 Genomes
+                 Project datasets.",
+  journal     = "Nat. Genet.",
+  volume      =  43,
+  number      =  5,
+  pages       = "491--498",
+  month       =  may,
+  year        =  2011
+}
+
+
+
 % The entry below contains non-ASCII chars that could not be converted
 % to a LaTeX equivalent.
 @ARTICLE{Kousathanas2011-bf,
@@ -126,6 +172,77 @@
   month       =  mar,
   year        =  2011
 }
+
+
+
+@ARTICLE{Lunter2011-uc,
+  title       = "Stampy: a statistical algorithm for sensitive and fast mapping
+                 of Illumina sequence reads",
+  author      = "Lunter, Gerton and Goodson, Martin",
+  affiliation = "Wellcome Trust Centre for Human Genetics, Oxford OX3 7BN,
+                 United Kingdom. gerton.lunter@well.ox.ac.uk",
+  abstract    = "High-volume sequencing of DNA and RNA is now within reach of
+                 any research laboratory and is quickly becoming established as
+                 a key research tool. In many workflows, each of the short
+                 sequences (``reads'') resulting from a sequencing run are
+                 first ``mapped'' (aligned) to a reference sequence to infer
+                 the read from which the genomic location derived, a
+                 challenging task because of the high data volumes and often
+                 large genomes. Existing read mapping software excel in either
+                 speed (e.g., BWA, Bowtie, ELAND) or sensitivity (e.g.,
+                 Novoalign), but not in both. In addition, performance often
+                 deteriorates in the presence of sequence variation,
+                 particularly so for short insertions and deletions (indels).
+                 Here, we present a read mapper, Stampy, which uses a hybrid
+                 mapping algorithm and a detailed statistical model to achieve
+                 both speed and sensitivity, particularly when reads include
+                 sequence variation. This results in a higher useable sequence
+                 yield and improved accuracy compared to that of existing
+                 software.",
+  journal     = "Genome Res.",
+  volume      =  21,
+  number      =  6,
+  pages       = "936--939",
+  month       =  jun,
+  year        =  2011
+}
+
+
+@ARTICLE{Anders2015-qa,
+  title       = "{HTSeq--a} Python framework to work with high-throughput
+                 sequencing data",
+  author      = "Anders, Simon and Pyl, Paul Theodor and Huber, Wolfgang",
+  affiliation = "Genome Biology Unit, European Molecular Biology Laboratory,
+                 69111 Heidelberg, Germany. Genome Biology Unit, European
+                 Molecular Biology Laboratory, 69111 Heidelberg, Germany.
+                 Genome Biology Unit, European Molecular Biology Laboratory,
+                 69111 Heidelberg, Germany.",
+  abstract    = "MOTIVATION: A large choice of tools exists for many standard
+                 tasks in the analysis of high-throughput sequencing (HTS)
+                 data. However, once a project deviates from standard
+                 workflows, custom scripts are needed. RESULTS: We present
+                 HTSeq, a Python library to facilitate the rapid development of
+                 such scripts. HTSeq offers parsers for many common data
+                 formats in HTS projects, as well as classes to represent data,
+                 such as genomic coordinates, sequences, sequencing reads,
+                 alignments, gene model information and variant calls, and
+                 provides data structures that allow for querying via genomic
+                 coordinates. We also present htseq-count, a tool developed
+                 with HTSeq that preprocesses RNA-Seq data for differential
+                 expression analysis by counting the overlap of reads with
+                 genes. AVAILABILITY AND IMPLEMENTATION: HTSeq is released as
+                 an open-source software under the GNU General Public Licence
+                 and available from http://www-huber.embl.de/HTSeq or from the
+                 Python Package Index at https://pypi.python.org/pypi/HTSeq.",
+  journal     = "Bioinformatics",
+  volume      =  31,
+  number      =  2,
+  pages       = "166--169",
+  month       =  "15~" # jan,
+  year        =  2015
+}
+
+
 
 @ARTICLE{Raj2014-im,
   title       = "{fastSTRUCTURE}: variational inference of population structure
@@ -197,9 +314,10 @@
   year    =  2014
 }
 
-@MISC{Dabney_undated-tc,
+@MISC{Storey,
   title  = "qvalue: Qvalue estimation for false discovery rate control",
-  author = "Dabney, A and Storey, J D"
+  author = "Storey, J D",
+  year   = 2015
 }
 
 @ARTICLE{Ye2013-fx,
@@ -937,7 +1055,7 @@
   title     = "Contrasting demographic history and population structure in
                Capsella rubella and Capsella grandiflora, two closely related
                species with different mating systems",
-  author    = "ST. ONGE, Kate R and K{\"{a}}llman, Thomas and Slotte, Tanja and
+  author    = "St. Onge, Kate R and K{\"{a}}llman, Thomas and Slotte, Tanja and
                Lascoux, Martin and Palm\'{e}, Anna E",
   abstract  = "Both mating system and population history can have large impacts
                on genetic diversity and population structure. Here, we use
