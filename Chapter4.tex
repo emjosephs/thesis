@@ -19,12 +19,12 @@ Here, we evaluate the relationship between coexpression network connectivity and
 We analyzed genome-wide gene expression data from the leaves of 146 \textit{C. grandiflora} individuals from one large population grown in common garden. The expression data from 99 of these individuals has been previously reported \citep{Josephs2015-nx}. For the previously unreported 47 individuals, we generated approximately 1.3 billion single-end RNAseq reads, with a median of 26.7 million reads per individual (range: 19.4 to 44.3 million). Of these, a median of 94.2\% reads mapped to genes (range: 93.1\% to 94.9\%).
 
 \subsection{Coexpression modules}
-Twenty-four gene coexpression modules were detected in the \textit{C. grandiflora} expression data using WGCNA \citep{langfelder2008}. These modules ranged in size from 43 to 4,094 genes. Clustering of the module eigengenes revealed that they fell into several broad groups of roughly equal size (Fig S1). Total connectivity values for each gene were calculated as the sum of the connection strengths with all other genes and intramodular connectivity values were calculated as the sum of the connection strengths with the other genes in the same module. These connectivity values show the expected scale-free distribution: there is a linear relationship between the connectivity to a gene (k) and the proportion of nodes with the connectivity (p(k)) when plotted on a log scale (slope = -1.61, r$^{2}$ = 0.96). (Fig S2). This scale free distribution means that most genes have relatively few connections, but some genes have a large number of connections. Total connectivity correlates strongly with intramodular connectivity (correlation coefficient = 0.807), so we chose to focus on intramodular connectivity for the rest of the paper.
+Twenty-four gene coexpression modules were detected in the \textit{C. grandiflora} expression data using WGCNA \citep{langfelder2008}. These modules ranged in size from 43 to 4,094 genes. Clustering of the module eigengenes revealed that they fell into several broad groups of roughly equal size (Fig.~\ref{fig:fsClust}). Total connectivity values for each gene were calculated as the sum of the connection strengths with all other genes and intramodular connectivity values were calculated as the sum of the connection strengths with the other genes in the same module. These connectivity values show the expected scale-free distribution: there is a linear relationship between the connectivity to a gene (k) and the proportion of nodes with the connectivity (p(k)) when plotted on a log scale (slope = -1.61, r$^{2}$ = 0.96). (Fig.~\ref{fig:fsScale}). This scale free distribution means that most genes have relatively few connections, but some genes have a large number of connections. Total connectivity correlates strongly with intramodular connectivity (correlation coefficient = 0.807), so we chose to focus on intramodular connectivity for the rest of the paper.
 
-Of the 24 \textit{C. grandiflora} coexpression modules detected, eight modules showed a high degree of preservation in \textit{Arabidopsis thaliana}, and another 12 showed a moderate degree of preservation (Figure S3, Table 1). All but one of the modules showed enrichment for GO-process terms that suggest specific biological roles for the different modules (Table 1).
+Of the 24 \textit{C. grandiflora} coexpression modules detected, eight modules showed a high degree of preservation in \textit{Arabidopsis thaliana}, and another 12 showed a moderate degree of preservation (Table 1). All but one of the modules showed enrichment for GO-process terms that suggest specific biological roles for the different modules (Table 1).
 
 \subsection{Connectivity affects divergence}
-Connectivity correlated negatively with dS ($\rho$ = -0.104, p \textless 0.001, ), dN ($\rho$ = -0.167, p \textless 0.001) and dN/dS ($\rho$ = -0.127, p \textless 0.001) (Fig.~\ref{fig:f1}A, Fig S4). The correlation between dN/dS and connectivity was significant within 7 out of 24 modules (p \textless 0.002), but these were also the largest modules, where there was the most power to detect a correlation (Fig. S5). Expression also correlated negatively with dN ($\rho$ = -0.276, p \textless 0.001, Fig. S4), dS ($\rho$ = -0.037, p \textless 0.001 Fig. S4), and dN/dS ($\rho$ = -0.261, p \textless 0.001, Fig.~\ref{fig:f1}B),  although the strength of the correlation with dS was quite weak. (Figure S4). Expression correlates positively with connectivity ($\rho$ = 0.289, p \textless 0.001, Fig.~\ref{fig:f1}C) suggesting that expression variation might explain observed divergence patterns. However, partial correlations that account for expression variation still show a significant although weaker relationship between connectivity and dN ($\rho$ = -0.09, p \textless 0.001), dS ($\rho$ =-0.09, p \textless 0.01) and dN/dS ($\rho$ =-0.05, p \textless 0.001). 
+Connectivity correlated negatively with  dN ($\rho$ = -0.167, p \textless 0.001,  Fig.~\ref{fig:fsCorr}A), dS ($\rho$ = -0.104, p \textless 0.001, Fig.~\ref{fig:fsCorr}B), and dN/dS ($\rho$ = -0.127, p \textless 0.001) (Fig.~\ref{fig:f1}A). The correlation between dN/dS and connectivity was significant within 7 out of 24 modules (p \textless 0.002), but these were also the largest modules, where there was the most power to detect a correlation (Fig.~\ref{fig:fsMod}). Expression also correlated negatively with dS ($\rho$ = -0.037, p \textless 0.001 Fig.~\ref{fig:fsCorrC}), dN ($\rho$ = -0.276, p \textless 0.001, Fig.~\ref{fig:fsCorr}D), and dN/dS ($\rho$ = -0.261, p \textless 0.001, Fig.~\ref{fig:f1}B),  although the strength of the correlation with dS was quite weak. (Fig.~\ref{fig:fsCorr}). Expression correlates positively with connectivity ($\rho$ = 0.289, p \textless 0.001, Fig.~\ref{fig:f1}C) suggesting that expression variation might explain observed divergence patterns. However, partial correlations that account for expression variation still show a significant although weaker relationship between connectivity and dN ($\rho$ = -0.09, p \textless 0.001), dS ($\rho$ =-0.09, p \textless 0.01) and dN/dS ($\rho$ =-0.05, p \textless 0.001). 
 
 \begin{figure}[ht!]
 \centering
@@ -33,18 +33,18 @@ Connectivity correlated negatively with dS ($\rho$ = -0.104, p \textless 0.001, 
 \label{fig:f1}
 \end{figure}
 
-However, experimental noise in measuring expression can make it difficult to fully remove expression’s effects in a partial correlation, potentially generating spurious correlations \citep{Drummond2006-pa}. To avoid this problem, we followed Drummond et al.’s recommendation and conducted a principal component analysis to identify independent sources of variation in our explanatory variables: dS, expression, intramodular connectivity, and the coefficient of variation in expression (‘expression variaton’). We found that dS and expression variation loaded positively  on PC1, while traits expression level and intramodular connectivity loaded negatively; PC1 explained 32\% of the variation across genes, while PC2, where all explanatory variables loaded negatively, explained 25\% of the variation (Table 2). A linear model based on the four principal components and all possible interactions explained $\sim$ 22\% of the variation in dN (Table~\ref{table:t1}). The first principal component explained 14\% of the variation in dN and was determined by all four explanatory variables, suggesting that dS and expression variation contribute positively to dN while intramodular connectivity and expression level contribute negatively to dN. 
+However, experimental noise in measuring expression can make it difficult to fully remove expression’s effects in a partial correlation, potentially generating spurious correlations \citep{Drummond2006-pa}. To avoid this problem, we followed Drummond et al.’s recommendation and conducted a principal component analysis to identify independent sources of variation in our explanatory variables: dS, expression, intramodular connectivity, and the coefficient of variation in expression (‘expression variaton’). We found that dS and expression variation loaded positively  on PC1, while traits expression level and intramodular connectivity loaded negatively; PC1 explained 32\% of the variation across genes, while PC2, where all explanatory variables loaded negatively, explained 25\% of the variation (Table~\ref{table:t2}). A linear model based on the four principal components and all possible interactions explained $\sim$ 22\% of the variation in dN (Table~\ref{table:t2}). The first principal component explained 14\% of the variation in dN and was determined by all four explanatory variables, suggesting that dS and expression variation contribute positively to dN while intramodular connectivity and expression level contribute negatively to dN. 
 
 \begin{table}[ht!]
 \centering
-\begin{tabular}{|l|l l l l l|}
+\begin{tabular} {|l|l l l l l|}
 \hline
  &PC1 &PC2 &PC3 &PC4 &All \\ [0.5ex]
 \hline
-\% variation in dN explained & 13.75 & &2.23 &0.98& 1.34 & 21.67\\
-P value & 01.49x10$^{-82}$ & 1.96x10$^{-37}$ & 1.22x10$^{-50}$ &  \\
+\% variation in dN explained & 13.75 &2.23 &0.98& 1.34 & 21.67\\
+P value & 0 & 1.5x10$^{-82}$ & 2.0x10$^{-37}$ & 1.2x10$^{-50}$ &  \\
 Direction of effect & + & - & + & - & \\
-\% of variance explained & 32.9 &25.5 &21.5 &20.6 &100 & \\
+\% of variance explained & 32.9 &25.5 &21.5 &20.6 &100\\
 \hline
 Contributions to PCs & & & & & \\ [0.5ex]
 dS & 0.512 & -0.481 & 0.420 & 0.566 & \\
@@ -53,35 +53,53 @@ Expression variation &0.573 &-0.328 &-0.065 &-0.748 & \\
 Intramodular connectivity &-0.344 &-0.742 &-0.564 &0.110 & \\
 \hline
 \end{tabular}
+\caption{\textbf{Parameters and results from principal components analysis}}
 \label{table:t2}
 \end{table}
 
 \subsection{Connectivity affects positive and negative selection}
 Reduced divergence in highly connected genes could be caused either by stronger negative selection or weaker positive selection. To investigate these alternatives, we divided all genes that were expressed in \textit{C. grandiflora} leaf tissue into four equally-sized categories based on intramodular connectivity and estimated the proportion of 0-fold degenerate sites in these categories under various strengths of purifying selection \citep{Eyre-Walker2009-zt}.
-The strength of negative selection across all expressed genes was similar to those observed in a previous study of a species-wide sample of \textit{C. grandiflora} (Fig. S6). However, $\alpha$ (the proportion of all 0-fold degenerate fixations due to positive selection) and $\omega$ (the rate of 0-fold degenerate fixations due to positive selection) were somewhat lower than observed in the species-wide sample: $\alpha$ in the population sample was 0.32 compared to 0.41 in the species-wide sample and $\omega$ was 0.06 compared to 0.08 in the species-wide sample. (Fig S6) \citep{Williamson2014-tf}.
 
-In general, negative selection acted more strongly on genes with higher connectivity (Figure 2). For example, 0.193 (95\% CIs: 0.186 - 0.197) of 0-fold degenerate sites in genes in the lowest connectivity category are effectively neutral (\textit{N$_{e}$S} \textless 1) while 0.115 (95\% CIs: 0.112 - 0.127) of 0-fold degenerate sites in genes in the highest connectivity category have \textit{N$_{e}$S} \textless 1 (p \textless 0.01). 
+The strength of negative selection across all expressed genes was similar to those observed in a previous study of a species-wide sample of \textit{C. grandiflora} (Fig.~\ref{fig:fsAll}A). However, $\alpha$ (the proportion of all 0-fold degenerate fixations due to positive selection) and $\omega$ (the rate of 0-fold degenerate fixations due to positive selection) were somewhat lower than observed in the species-wide sample: $\alpha$ in the population sample was 0.32 compared to 0.41 in the species-wide sample and $\omega$ was 0.06 compared to 0.08 in the species-wide sample (Fig.~\ref{fig:fsAll}B, C) \citep{Williamson2014-tf}.
 
-Positive selection also acted more strongly in highly connected genes. $\alpha$, was 0.209 (95\%CIs: 0.295 - 0.476) in the lowest connectivity category and 0.455 (95\% CIs: 0.395-0.476) in the highest connectivity category (p \textless 0.01). $\omega$ was also higher in highly connected genes (0.0834, 95\% CIs: 0.0722-0.0895) than genes with low connectivity (0.0449, 95\%CIs: 0.00740-0.0594) (p \textless 0.005)
+In general, negative selection acted more strongly on genes with higher connectivity (Fig. ~\ref{fig:f2}). For example, 0.193 (95\% CIs: 0.186 - 0.197) of 0-fold degenerate sites in genes in the lowest connectivity category are effectively neutral (\textit{N$_{e}$S} \textless 1) while 0.115 (95\% CIs: 0.112 - 0.127) of 0-fold degenerate sites in genes in the highest connectivity category have \textit{N$_{e}$S} \textless 1 (p \textless 0.01)(Fig. ~\ref{fig:f2}A). Positive selection also acted more strongly in highly connected genes. $\alpha$, was 0.209 (95\%CIs: 0.295 - 0.476) in the lowest connectivity category and 0.455 (95\% CIs: 0.395-0.476) in the highest connectivity category (p \textless 0.01)(Fig. ~\ref{fig:f2}B). $\omega$ was also higher in highly connected genes (0.0834, 95\% CIs: 0.0722-0.0895) than genes with low connectivity (0.0449, 95\%CIs: 0.00740-0.0594) (p \textless 0.005)(Fig. ~\ref{fig:f2}C).
 
-However, expression level could also explain stronger negative selection in highly connected genes, since expression level is correlated with connectivity and genes with higher expression in leaf tissue in \textit{C. grandiflora} experience stronger negative selection \citep{Williamson2014-tf}. To control for expression level in this analysis, we found a subset of our dataset within a narrow range of expression levels where expression level and connectivity were not correlated and repeated our analysis of selection on this subset of genes (N = 2,714). Within this subset, negative selection was still stronger on genes with higher connectivity values, although this effect was somewhat weaker: 0.113 (95\% CIs: 0.100 - 0.129) of sites in the lowest connectivity category were effectively neutral (\textit{N$_{e}$S} \textless 1) while only 0.08 (95\% CIs: 0.0741-0.0882) of 0-fold degenerate sites in the highest connectivity category were neutral (p \textless 0.01). 
-Since no relationship between the rate of positive fixations ($\omega$) and expression has been observed \citep{Williamson2014-tf}, it seems likely that the differences in $\omega$ observed between connectivity classes in the entire dataset are free of the confounding effects of expression. However, we still investigated positive selection in our subset and found that positive selection was stronger on highly connected genes, although reduced sample size made it difficult to calculate measures of positive selection for the lowest connectivity category, which had only 251 genes. Still, the trend suggests that positive selection is stronger in highly connected genes. $\alpha$ is 0.433 (95\% CIs: 0.371 - 0.510) in genes in the highest connectivity class and 0.324 (95\% CIs: 0.182 - 0.411) in the mid-low connectivity category (p \textless 0.05). Similarly, $\omega$ was higher in the highest connectivity class (0.0557, 95\% CIs: 0.0443-0.0682) than in the mid-low connectivity class (0.0413, 95\% CIs: 0.0191-0.0585, p = 0.19). 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=\linewidth]{Ch4Fig2}
+\caption{\textbf{ Estimates of negative and positive selection in genes of different connectivity categories.} A) The proportion of sites found in each bin of purifying selection strength, separated by connectivity category. B) The proportion of sites fixed by positive selection, and C) the rate of adaptive substitution. Error bars represent 95\% confidence intervals.}
+\label{fig:f2}
+\end{figure}
+
+However, expression level could also explain stronger negative selection in highly connected genes, since expression level is correlated with connectivity and genes with higher expression in leaf tissue in \textit{C. grandiflora} experience stronger negative selection \citep{Williamson2014-tf}. To control for expression level in this analysis, we found a subset of our dataset within a narrow range of expression levels where expression level and connectivity were not correlated and repeated our analysis of selection on this subset of genes (N = 2,714). Within this subset, negative selection was still stronger on genes with higher connectivity values, although this effect was somewhat weaker: 0.113 (95\% CIs: 0.100 - 0.129) of sites in the lowest connectivity category were effectively neutral (\textit{N$_{e}$S} \textless 1) while only 0.08 (95\% CIs: 0.0741-0.0882) of 0-fold degenerate sites in the highest connectivity category were neutral (p \textless 0.01) (Fig. ~\ref{fig:f3}A). 
+
+Since no relationship between the rate of positive fixations ($\omega$) and expression has been observed \citep{Williamson2014-tf}, it seems likely that the differences in $\omega$ observed between connectivity classes in the entire dataset are free of the confounding effects of expression. However, we still investigated positive selection in our subset and found that positive selection was stronger on highly connected genes, although reduced sample size made it difficult to calculate measures of positive selection for the lowest connectivity category, which had only 251 genes. Still, the trend suggests that positive selection is stronger in highly connected genes. $\alpha$ is 0.433 (95\% CIs: 0.371 - 0.510) in genes in the highest connectivity class and 0.324 (95\% CIs: 0.182 - 0.411) in the mid-low connectivity category (p \textless 0.05) (Fig.~\ref{fig:f3}B). Similarly, $\omega$ was higher in the highest connectivity class (0.0557, 95\% CIs: 0.0443-0.0682) than in the mid-low connectivity class (0.0413, 95\% CIs: 0.0191-0.0585, p = 0.19)(Fig.~\ref{fig:f3}C). 
 
 
-Figure 2: Estimates of negative and positive selection in genes of different connectivity categories. A) The proportion of sites found in each bin of purifying selection strength, separated by connectivity category. B) The proportion of sites fixed by positive selection, and C) the rate of adaptive substitution. Error bars represent 95\% confidence intervals.
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=\linewidth]{Ch4Fig3}
+\caption{\textbf{Estimates of negative and positive selection in genes of different connectivity categories within the subset where expression does not correlate with connectivity.} A) The proportion of sites found in each bin of purifying selection strength, separated by connectivity category. B) The proportion of sites fixed by positive selection, and C) the rate of adaptive substitution. Error bars represent 95\% confidence intervals.}
+\label{fig:f3}
+\end{figure}
 
-
-Figure 3: Estimates of negative and positive selection in genes of different connectivity categories within the subset where expression does not correlate with connectivity. A) The proportion of sites found in each bin of purifying selection strength, separated by connectivity category. B) The proportion of sites fixed by positive selection, and C) the rate of adaptive substitution. Error bars represent 95\% confidence intervals.
 
 \subsection{Selection across coexpression modules}
-The strength of positive and negative selection varies across modules (Figure 4). The proportion of 0-fold degenerate sites evolving neutrally (\textit{N$_{e}$S} \textless 1) ranged from 0.102 (grey60) to 0.216 (skyblue3) . The proportion of 0-fold degenerate fixations due to positive selection within modules ranged from  0.412 (skyblue3) to 0.531 (yellowgreen) and the rate of 0-fold degenerate fixation due to positive selection ranged from 0.025 (magenta) to 0.145 (yellowgreen). There was no correlation between the proportion of 0-fold degenerate sites in a module that evolve neutrally (\textit{N$_{e}$S} \textless 1) and the rate of fixation due to positive selection ($\omega$). (Pearson correlation, p = 0.34). 
+The strength of positive and negative selection varies across modules (Fig.~\ref{fig:f4}). The proportion of 0-fold degenerate sites evolving neutrally (\textit{N$_{e}$S} \textless 1) ranged from 0.102 (grey60) to 0.216 (skyblue3) (Fig.~\ref{fig:f4}A). The proportion of 0-fold degenerate fixations due to positive selection within modules ranged from  0.412 (skyblue3) to 0.531 (yellowgreen) and the rate of 0-fold degenerate fixation due to positive selection ranged from 0.025 (magenta) to 0.145 (yellowgreen) (Fig.~\ref{fig:f4}B). There was no correlation between the proportion of 0-fold degenerate sites in a module that evolve neutrally (\textit{N$_{e}$S} \textless 1) and the rate of fixation due to positive selection ($\omega$). (Pearson correlation, p = 0.34). 
 
 We investigated the GO processes enriched in modules that experience the strongest positive selection to get a better picture of what biological processes may be under selection in our population. The module that experiences the strongest positive selection (yellowgreen, $\alpha$ = 0.531, $\omega$ = 0.147) had a number of enrichments for GO processes, including response to chitin, response to organonitrogen compound, response to nitrogen compound, and a number of processes involved in defense response and immune systems. (Table 1). The module with the second highest $\alpha$ and third highest $\omega$ (lightsteelblue1, $\alpha$=0.517, $\omega$ = 0.103) also had enrichments in defense related genes. (Table 1).  The module with the second highest $\omega$ (0.1046) and seventh highest $\alpha$ (0.403), saddlebrown, had enrichments in processes involved in DNA replication and epigenetic regulation of gene expression.
 
 For the most part, modules under weak positive selection had enrichments in different modules than those under strong positive selection. For example, the magenta module ($\alpha$ = 0.166, $\omega$ = 0.025) had enrichments in phosphalitidylinositol biosenthetic and metabolic processes, but the darkgrey module ($\alpha$=0.182, $\omega$ = 0.027) did not have any significant enrichments. The midnightblue module, with the third lowest measures of positive selection ($\alpha$ = 0.189, $\omega$=0.030 ) had enrichments in response to chitin, organonitrogen compounds, and nitrogen compounds. The surprising result that both a module under the strong positive selection (yellowgreen) and a module under weak positive selection (midnightblue) share similar GO processes suggests that not all the genes in this GO process are under the same selective pressures and that coexpression analysis was able to separate genes by selective pressure.
 
 
-Figure 4: Positive selection across modules. (A) shows the proportion of sites where NeS < 1 across modules. Black bars represent 95\% confidence intervals. (B) shows $\omega$ across modules. Black bars also represent 95\% confidence intervals.
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=\linewidth]{Ch4Fig4}
+\caption{\textbf{Positive selection across modules.} A) shows the proportion of sites where NeS < 1 across modules. Black bars represent 95\% confidence intervals. B) shows $\omega$ across modules. Black bars also represent 95\% confidence intervals.
+}
+\label{fig:f4}
+\end{figure}
+
 
 \section{Discussion}
 
@@ -136,23 +154,43 @@ Robert Williamson, Adrian Platts, Wei Wang, Alan Moses, Asher Cutter.
 
 \section{Appendix: Supplementary figures and tables}
 
-Figure S1: Clustering of model eigengenes
+\begin{figure}[ht!]
+      \centering
+       \includegraphics{CapMergeLine}
+    \caption{\textbf{Clustering of module eigengenes}}
+    \label{fig:fsCLust}
+\end{figure}
+
+
+\begin{figure}[ht!]
+      \centering
+       \includegraphics{ScaleFree}
+    \caption{\textbf{Coexpression modules are scale-free.} Genes were binned by connectivity level, k, and are plotted against the proportion of genes in each connectivity bin, p(k) on a log scale. R$^{2}$ = 0.9, slope = -1.53.}
+    \label{fig:fsScale}
+\end{figure}
+
+
+\begin{figure}[ht!]
+      \centering
+       \includegraphics{Ch4FigCorr}
+    \caption{\textbf{Correlations between expression and intramodular connectivity and dN and dS.}}
+    \label{fig:fsCorr}
+\end{figure}
+
+
+\begin{figure}[ht!]
+      \centering
+       \includegraphics{Ch4FigMod}
+    \caption{\textbf{ Within-module estimates of the correlation between intramodular connectivity and dN/dS depend on module size}A) The number of genes in a module (x-axis) plotted against the p value for significance of the correlation between connectivity and dN/dS within that module (y-axis) B) THe number of genes in a module (x-axis) plotted against the slope of the relationship between connectivity and dN/dS (y-axis) C) The relationship between p (x-axis) and slope (y-axis) for within-module correlations of connectivity and dN/dS }
+    \label{fig:fsMod}
+\end{figure}
 
 
 
 
-Figure S2: Coexpression modules are scale-free. Genes were binned by connectivity level, k, and are plotted against the proportion of genes in each connectivity bin, p(k) on a log scale. R$^{2}$ = 0.9, slope = -1.53. 
-
-
-Figure S3: Module preservation. The Z-summary scores for preservation between C. grandiflora coexpression modules and expression data from A. thaliana sseedlines are plotted on the y axis against module size on the x-axis. Module size does not predict preservation. Z-summary scores \textless 10 suggest strong preservation and Z-summary scores between 2 and 10 suggest moderate module preservation.
-
-
-Figure S4: Correlations between expression and intramodular connectivity and dN and dS.
-
-
-
-Figure S5: Within-module estimates of the correlation between kWithin and dN/dS depend on module size. 
-
-
-Figure S6: Positive and negative selection at 0-fold degenerate sites in all genes included in the coexpression analysis compared to selection on all 0-fold sites in a previously-reported species-wide sample.
-A) The proportion of sites found in each bin of purifying selection strength. B) The proportion of sites fixed by positive selection, and C) the rate of adaptive substitution. Error bars represent 95\% confidence intervals and are only reported for the data from this study. Measurements of selection strength on the species-wide sample come from \citep{Williamson2014-tf}.
+\begin{figure}[ht!]
+      \centering
+       \includegraphics{Ch4FigAll}
+    \caption{\textbf{Positive and negative selection at 0-fold degenerate sites in all genes included in the coexpression analysis compared to selection on all 0-fold sites in a previously-reported species-wide sample.} A) The proportion of sites found in each bin of purifying selection strength. B) The proportion of sites fixed by positive selection, and C) the rate of adaptive substitution. Error bars represent 95\% confidence intervals and are only reported for the data from this study. Measurements of selection strength on the species-wide sample come from \citep{Williamson2014-tf}.}
+    \label{fig:fsAll}
+\end{figure}
