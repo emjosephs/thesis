@@ -23,15 +23,38 @@ Twenty-four gene coexpression modules were detected in the \textit{C. grandiflor
 
 Of the 24 \textit{C. grandiflora} coexpression modules detected, eight modules showed a high degree of preservation in \textit{Arabidopsis thaliana}, and another 12 showed a moderate degree of preservation (Figure S3, Table 1). All but one of the modules showed enrichment for GO-process terms that suggest specific biological roles for the different modules (Table 1).
 
+\subsection{Connectivity affects divergence}
+Connectivity correlated negatively with dS ($\rho$ = -0.104, p \textless 0.001, ), dN ($\rho$ = -0.167, p \textless 0.001) and dN/dS ($\rho$ = -0.127, p \textless 0.001) (Fig.~\ref{fig:f1}A, Fig S4). The correlation between dN/dS and connectivity was significant within 7 out of 24 modules (p \textless 0.002), but these were also the largest modules, where there was the most power to detect a correlation (Fig. S5). Expression also correlated negatively with dN ($\rho$ = -0.276, p \textless 0.001, Fig. S4), dS ($\rho$ = -0.037, p \textless 0.001 Fig. S4), and dN/dS ($\rho$ = -0.261, p \textless 0.001, Fig.~\ref{fig:f1}B),  although the strength of the correlation with dS was quite weak. (Figure S4). Expression correlates positively with connectivity ($\rho$ = 0.289, p \textless 0.001, Fig.~\ref{fig:f1}C) suggesting that expression variation might explain observed divergence patterns. However, partial correlations that account for expression variation still show a significant although weaker relationship between connectivity and dN ($\rho$ = -0.09, p \textless 0.001), dS ($\rho$ =-0.09, p \textless 0.01) and dN/dS ($\rho$ =-0.05, p \textless 0.001). 
+
 \begin{figure}[ht!]
 \centering
-\includgraphics[scale=0.8][Ch4Fig1]
+\includegraphics[width=\linewidth]{Ch4Fig1}
 \caption{\textbf{Correlations between protein divergence, intramodular connectivity, and expression.} (A) dN/dS correlates negatively with intramodular connectivity ($\rho$ = -0.127, p \textless 0.001). (B) dN/dS correlates negatively with expression ($\rho$ = -0.261, p \textless 0.001). (B) Expression correlates positively with intramodular connectivity ($\rho$ = 0.289, p \textless 0.001)}
+\label{fig:f1}
+\end{figure}
 
-\subsection{Connectivity affects divergence}
-Connectivity correlated negatively with dS ($\rho$ = -0.104, p \textless 0.001, ), dN ($\rho$ = -0.167, p \textless 0.001) and dN/dS ($\rho$ = -0.127, p \textless 0.001) (Fig. 1a, Fig S4). The correlation between dN/dS and connectivity was significant within 7 out of 24 modules (p \textless 0.002), but these were also the largest modules, where there was the most power to detect a correlation (Fig. S5). Expression also correlated negatively with dN ($\rho$ = -0.276, p \textless 0.001, Fig. S4), dS ($\rho$ = -0.037, p \textless 0.001 Fig. S4), and dN/dS ($\rho$ = -0.261, p \textless 0.001, Fig 1b),  although the strength of the correlation with dS was quite weak. (Figure S4). Expression correlates positively with connectivity ($\rho$ = 0.289, p \textless 0.001, Fig 1c) suggesting that expression variation might explain observed divergence patterns. However, partial correlations that account for expression variation still show a significant although weaker relationship between connectivity and dN ($\rho$ = -0.09, p \textless 0.001), dS ($\rho$ =-0.09, p \textless 0.01) and dN/dS ($\rho$ =-0.05, p \textless 0.001). 
+However, experimental noise in measuring expression can make it difficult to fully remove expression’s effects in a partial correlation, potentially generating spurious correlations \citep{Drummond2006-pa}. To avoid this problem, we followed Drummond et al.’s recommendation and conducted a principal component analysis to identify independent sources of variation in our explanatory variables: dS, expression, intramodular connectivity, and the coefficient of variation in expression (‘expression variaton’). We found that dS and expression variation loaded positively  on PC1, while traits expression level and intramodular connectivity loaded negatively; PC1 explained 32\% of the variation across genes, while PC2, where all explanatory variables loaded negatively, explained 25\% of the variation (Table 2). A linear model based on the four principal components and all possible interactions explained $\sim$ 22\% of the variation in dN (Table~\ref{table:t1}). The first principal component explained 14\% of the variation in dN and was determined by all four explanatory variables, suggesting that dS and expression variation contribute positively to dN while intramodular connectivity and expression level contribute negatively to dN. 
 
-However, experimental noise in measuring expression can make it difficult to fully remove expression’s effects in a partial correlation, potentially generating spurious correlations \citep{Drummond2006-pa}. To avoid this problem, we followed Drummond et al.’s recommendation and conducted a principal component analysis to identify independent sources of variation in our explanatory variables: dS, expression, intramodular connectivity, and the coefficient of variation in expression (‘expression variaton’). We found that dS and expression variation loaded positively  on PC1, while traits expression level and intramodular connectivity loaded negatively; PC1 explained 32\% of the variation across genes, while PC2, where all explanatory variables loaded negatively, explained 25\% of the variation (Table 2). A linear model based on the four principal components and all possible interactions explained $\sim$ 22\% of the variation in dN (Table 2). The first principal component explained 14\% of the variation in dN and was determined by all four explanatory variables, suggesting that dS and expression variation contribute positively to dN while intramodular connectivity and expression level contribute negatively to dN. 
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|l|l l l l l|}
+\hline
+ &PC1 &PC2 &PC3 &PC4 &All \\ [0.5ex]
+\hline
+\% variation in dN explained & 13.75 & &2.23 &0.98& 1.34 & 21.67\\
+P value & 01.49x10$^{-82}$ & 1.96x10$^{-37}$ & 1.22x10$^{-50}$ &  \\
+Direction of effect & + & - & + & - & \\
+\% of variance explained & 32.9 &25.5 &21.5 &20.6 &100 & \\
+\hline
+Contributions to PCs & & & & & \\ [0.5ex]
+dS & 0.512 & -0.481 & 0.420 & 0.566 & \\
+Expression level & -0.539 &-0.332 &0.702 & -0.328 & \\
+Expression variation &0.573 &-0.328 &-0.065 &-0.748 & \\
+Intramodular connectivity &-0.344 &-0.742 &-0.564 &0.110 & \\
+\hline
+\end{tabular}
+\label{table:t2}
+\end{table}
 
 \subsection{Connectivity affects positive and negative selection}
 Reduced divergence in highly connected genes could be caused either by stronger negative selection or weaker positive selection. To investigate these alternatives, we divided all genes that were expressed in \textit{C. grandiflora} leaf tissue into four equally-sized categories based on intramodular connectivity and estimated the proportion of 0-fold degenerate sites in these categories under various strengths of purifying selection \citep{Eyre-Walker2009-zt}.
