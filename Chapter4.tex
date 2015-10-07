@@ -4,11 +4,11 @@
 \chapter{Coexpression network connectivity affects selection}
 
 \section{Abstract}
-
+The number and strength of interactions between genes will shape the selective effects of mutations in these genes. Specifically, genes with more interactions are likely to be more pleiotropic and will therefore be under stronger constraint and will be less free to adapt. We used coexpression network connectivity in the plant species \textit{Capsella grandiflora} to investigate the relationship between connectivity and selection. Genes with high connectivity have lower amino acid divergence, even when controlling for expression. The relationship between connectivity and divergence appears to be driven by stronger negative selection in highly connected genes. However, positive selection is also stronger in more highly connected genes, implying that positive and negative selection have opposing effects on divergence. Overall, our results show that pleiotropy, as measured through network connectivity, increases selective constraint but does not reduce the adaptive potential of genes.
 
 \section{Introduction}
 
-Variation in quantitative traits results from the combined effects of genetic variation at many genes \citep{lynch1998}, and the ways in which these genes interact can influence how selection shapes this genetic variation. Specifically, genes that have large effects on a specific trait or with pleiotropic effects are likely to be under stronger purifying selection than genes with smaller effects or less pleiotropy. Similarly, genes with smaller effects on traits or reduced pleiotropy may be more subject to weaker evolutionary constraint and thus be more free to adapt. While these hypotheses are intuitively appealing, we lack still have lack data on how important gene interactions are on a genome-wide scale. One way to estimate the effect size and/or pleiotropy of genes on a genome-wide scale is to use network connectivity information: genes with higher connectivity are more likely to be pleiotropic or large-effect that genes with low connectivity. Here, we investigate the relationship between positive and negative selection and network connectivity in the plant \textit{Capsella grandiflora}.
+Variation in quantitative traits results from the combined effects of genetic variation at many genes \citep{lynch1998}, and the ways in which these genes interact can influence how selection shapes this genetic variation. Specifically, genes that have large effects on a specific trait or with pleiotropic effects are likely to be under stronger purifying selection than genes with smaller effects or less pleiotropy\citep{orr2000, stern2008}. Similarly, genes with smaller effects on traits or reduced pleiotropy may be more subject to weaker evolutionary constraint and thus be more free to adapt\citep{orr2000, stern2008}. While these hypotheses are intuitively appealing, we lack still have lack data on how important gene interactions are on a genome-wide scale. One way to estimate the effect size and/or pleiotropy of genes on a genome-wide scale is to use network connectivity information: genes with higher connectivity are more likely to be pleiotropic or large-effect that genes with low connectivity\citep{he2006}. Here, we investigate the relationship between positive and negative selection and network connectivity in the plant \textit{Capsella grandiflora}.
 
 A large body of work has shown that amino acid divergence is affected by network properties, including the number of protein-protein interactions \citep{Fraser2002-rg,Lemos2005-io,Luisi2015-zz} but see \citep{Hahn2004-ke,Jordan2003-ri}, protein-network centrality \cite{Hahn2005-au}, pathway position \citep{Rausher1999-nk,Ramsay2009-vf,Eanes2011-on}, metabolic network connectivity \citep{Vitkup2006-bo}, regulatory network centrality \citep{Jovelin2009-tu}, and coexpression network connectivity \citep{Jordan2004-vj,Carlson2006-ai}. However, reduced amino acid divergence in highly connected genes has been interpreted to be due to either stronger constraint on well-connected genes \citep{Hahn2005-au,Ramsay2009-vf} or more frequent positive selection in genes on the network periphery \citep{Kim2007-xn,Luisi2015-zz}, both of which are possible, but are difficult to distinguish using just divergence-based approaches. In addition, network properties often correlate with expression level, which itself correlates with amino acid divergence, suggesting that expression variation may sometimes underlie observed relationships between amino acid divergence and connectivity \citep{Drummond2006-pa}. However, previous studies have not consistently controlled for the effects of expression on the relationship between connectivity and selection \citep{Jordan2004-vj,Fraser2002-rg}.
 
@@ -109,11 +109,11 @@ Most previous work on the relationship between connectivity and selection has fo
 
 We are not the first to note a relationship between connectivity and synonymous divergence \citep{Jordan2004-vj}. The cause of this correlation seems unclear. Jordan et al. suggested that highly connected genes may have have more constraint on synonymous sites due to translational regulation. A full understanding of the causes of the relationship between connectivity and dS will likely depend on developing a better picture of the mechanism driving the relationship between connectivity and other selective parameters.
 
-A relationship between positive and negative selection and coexpression network connectivity could result from a few different biological mechanisms. First, genes with higher connectivity could have more pleiotropic effects (cite), which would constrain sequence evolution. However, while it has been suggested that highly pleiotropic genes should experience reduced positive selection (cite), we do not observe this in our data. Alternatively, mutations in genes with higher connectivity may have larger phenotypic effect sizes, suggesting that both positive and negative selection may be stronger in highly connected genes \citep{Olson-Manning2012-ap}. This latter hypothesis better fits our own findings that positive selection is stronger in well-connected genes.
+A relationship between positive and negative selection and coexpression network connectivity could result from a few different biological mechanisms. First, genes with higher connectivity could have more pleiotropic effects \citep{he2006}, which would constrain sequence evolution. However, while it has been suggested that highly pleiotropic genes should experience reduced positive selection \citep{orr2000, stern2008}, we do not observe this in our data. Alternatively, mutations in genes with higher connectivity may have larger phenotypic effect sizes, suggesting that both positive and negative selection may be stronger in highly connected genes \citep{Olson-Manning2012-ap}. This latter hypothesis better fits our own findings that positive selection is stronger in well-connected genes.
 
 Linking the relationship between connectivity and selection to a specific biological mechanism will require a closer understanding of how coexpression connectivity relates to pathway and network structure. A number of studies have investigated pathway position and selection in specific pathways. For example, genes in the human innate immune system are more constrained when they have many connections with other genes while genes at the top and the bottom of the network have the strongest evidence of positive selection \citep{Casals2011-jz}. However, the insulin and target of rapamycin pathways show opposite patterns (reviewed in \citep{Olson-Manning2013-op}. However, there is no clear way to link coexpression network connectivity with directionality and pathway structure, making it difficult to evaluate specific predictions about network structure with coexpression networks.
 
-Observations that the evolutionary rate varies between genes were initially hypothesized to be due to variation in the proportion of gene sites under constraint: genes with a larger portion of constrained sites evolved slowly. (\citep{Kimura1977-ib}). This view implies that variation in evolutionary rates relates directly to the function of the proteins. However, later investigations suggested that most or even all of the variation in evolutionary rates between proteins was not due to function at all, but instead a by-product of expression level variation that makes deleterious mutations more deleterious in highly expressed genes. \citep{Drummond2006-pa,Zhang2015-ne}. While it is undeniable that expression level does influence evolutionary rates, by demonstrating a relationship between connectivity and both negative and positive selection, we have shown that protein function does contribute to the variation in selection between genes. This tells us that gene function matters on a genome-wide scale for determining genetic variation. 
+Observations that the evolutionary rate varies between genes were initially hypothesized to be due to variation in the proportion of gene sites under constraint: genes with a larger portion of constrained sites evolved slowly. (\citep{Kimura1977-ib}). This view implies that variation in evolutionary rates relates directly to the function of the proteins. However, later investigations suggested that most or even all of the variation in evolutionary rates between proteins was not due to function at all, but instead a by-product of expression level variation that makes deleterious mutations more deleterious in highly expressed genes. \citep{Drummond2006-pa,Zhang2015-ne}. While it is undeniable that expression level does influence evolutionary rates, by demonstrating a relationship between connectivity and both negative and positive selection, we have shown that protein function does contribute to the variation in selection between genes, suggesting that gene function matters on a genome-wide scale for determining genetic variation. 
 
 
 \section{Materials and Methods}
@@ -153,6 +153,205 @@ Divergence was measured from an outgroup, \textit{Neslia paniculata}, aligned to
 Robert Williamson, Adrian Platts, Wei Wang, Alan Moses, Asher Cutter.
 
 \section{Appendix: Supplementary figures and tables}
+
+\begin{landscape}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|rrrrrlP{5cm}r|}
+  \hline
+Module & Z & N & \textit{N$_{e}$S} \textless 1 & $\alpha$ & $\omega$ & GO Term & Description & p \\ 
+  \hline
+bisque4 & 3.827 & 191 & 0.137 & 0.402 & 0.080 & GO:0010207 & photosystem II assembly & 1.9E-09 \\ 
+   &  &  &  &  &  & GO:0019252 & starch biosynthetic process & 6.1E-08 \\ 
+   &  &  &  &  &  & GO:0005982 & starch metabolic process & 1.2E-07 \\ 
+   &  &  &  &  &  & GO:0000023 & maltose metabolic process & 1.6E-07 \\ 
+   &  &  &  &  &  & GO:0005984 & disaccharide metabolic process & 6.4E-07 \\ 
+\hline
+  black & 8.104 & 1106 & 0.147 & 0.290 & 0.053 & GO:1902589 & single-organism organelle organization & 4.3E-05 \\ 
+   &  &  &  &  &  & GO:0022402 & cell cycle process & 4.5E-05 \\ 
+   &  &  &  &  &  & GO:0009630 & gravitropism & 8.9E-05 \\ 
+   &  &  &  &  &  & GO:0009606 & tropism & 8.9E-05 \\ 
+   &  &  &  &  &  & GO:0009629 & response to gravity & 1.4E-04 \\ 
+\hline  
+blue & 12.664 & 2066 & 0.134 & 0.230 & 0.035 & GO:0043043 & peptide biosynthetic process & 1.6E-90 \\ 
+   &  &  &  &  &  & GO:0006412 & translation & 3.8E-90 \\ 
+   &  &  &  &  &  & GO:0043604 & amide biosynthetic process & 6.0E-87 \\ 
+   &  &  &  &  &  & GO:0006518 & peptide metabolic process & 4.2E-86 \\ 
+   &  &  &  &  &  & GO:0043603 & cellular amide metabolic process & 7.8E-77 \\ 
+\hline  
+brown & -1.149 & 2757 & 0.147 & 0.236 & 0.040 & GO:0006914 & autophagy & 1.2E-09 \\ 
+   &  &  &  &  &  & GO:0044248 & cellular catabolic process & 6.9E-07 \\ 
+   &  &  &  &  &  & GO:0046700 & heterocycle catabolic process & 1.5E-04 \\ 
+   &  &  &  &  &  & GO:0044242 & cellular lipid catabolic process & 1.7E-04 \\ 
+   &  &  &  &  &  & GO:0019439 & aromatic compound catabolic process & 2.2E-04 \\ 
+\hline 
+ darkgrey & 1.195 & 357 & 0.137 & 0.182 & 0.027 &  NA &  NA & NA \\ 
+\hline
+  darkorange2 & 4.598 & 982 & 0.144 & 0.196 & 0.031 & GO:0010264 & myo-inositol hexakisphosphate biosynthetic process & 2.5E-05 \\ 
+   &  &  &  &  &  & GO:0033517 & myo-inositol hexakisphosphate metabolic process & 2.5E-05 \\ 
+   &  &  &  &  &  & GO:0032958 & inositol phosphate biosynthetic process & 4.0E-05 \\ 
+   &  &  &  &  &  & GO:0046173 & polyol biosynthetic process & 6.3E-05 \\ 
+   &  &  &  &  &  & GO:0043647 & inositol phosphate metabolic process & 3.4E-04 \\ 
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|rrrrrlP{5cm}r|}
+  \hline
+Module & Z & N & \textit{N$_{e}$S} \textless 1& $\alpha$ & $\omega$ & GO Term & Description & p \\ 
+  \hline
+  darkred & 3.277 & 456 & 0.124 & 0.375 & 0.065 & GO:0048583 & regulation of response to stimulus & 2.0E-05 \\ 
+   &  &  &  &  &  & GO:0031347 & regulation of defense response & 3.2E-05 \\ 
+   &  &  &  &  &  & GO:0045087 & innate immune response & 4.5E-05 \\ 
+   &  &  &  &  &  & GO:1900674 & olefin biosynthetic process & 5.6E-05 \\ 
+   &  &  &  &  &  & GO:1900673 & olefin metabolic process & 5.6E-05 \\ 
+\hline
+
+  darkturquoise & 6.152 & 1003 & 0.126 & 0.359 & 0.061 & GO:1901700 & response to oxygen-containing compound & 5.4E-11 \\ 
+   &  &  &  &  &  & GO:0042221 & response to chemical & 5.5E-09 \\ 
+   &  &  &  &  &  & GO:0050896 & response to stimulus & 1.5E-08 \\ 
+   &  &  &  &  &  & GO:0001101 & response to acid chemical & 7.1E-07 \\ 
+   &  &  &  &  &  & GO:0048511 & rhythmic process & 1.6E-06 \\ 
+\hline  
+floralwhite & 5.314 & 249 & 0.108 & 0.376 & 0.057 & GO:0019682 & glyceraldehyde-3-phosphate metabolic process & 1.4E-22 \\ 
+   &  &  &  &  &  & GO:0019637 & organophosphate metabolic process & 9.5E-22 \\ 
+   &  &  &  &  &  & GO:0019288 & isopentenyl diphosphate biosynthetic process  methylerythritol 4-phosphate pathway
+ & 3.6E-21 \\ 
+   &  &  &  &  &  & GO:0009240 & isopentenyl diphosphate biosynthetic process & 4.7E-21 \\ 
+   &  &  &  &  &  & GO:0046490 & isopentenyl diphosphate metabolic process & 4.7E-21 \\ 
+\hline 
+ green & 3.104 & 1269 & 0.155 & 0.231 & 0.041 & GO:0009853 & photorespiration & 1.2E-11 \\ 
+   &  &  &  &  &  & GO:0043094 & cellular metabolic compound salvage & 7.8E-10 \\ 
+   &  &  &  &  &  & GO:0080129 & proteasome core complex assembly & 1.2E-06 \\ 
+   &  &  &  &  &  & GO:0043248 & proteasome assembly & 1.3E-06 \\ 
+   &  &  &  &  &  & GO:0051788 & response to misfolded protein & 1.3E-06 \\ 
+\hline 
+
+\end{tabular}
+\end{table}
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|rrrrrlP{5cm}r|}
+  \hline
+Module & Z & N & \textit{N$_{e}$S} \textless 1 & $\alpha$ & $\omega$ & GO Term & Description & p \\ 
+  \hline
+
+ grey60 & 3.874 & 278 & 0.102 & 0.507 & 0.090 & GO:0007169 & transmembrane receptor protein tyrosine kinase signaling pathway & 4.1E-12 \\ 
+   &  &  &  &  &  & GO:0007167 & enzyme linked receptor protein signaling pathway & 4.1E-12 \\ 
+   &  &  &  &  &  & GO:0007166 & cell surface receptor signaling pathway & 2.1E-11 \\ 
+   &  &  &  &  &  & GO:0006468 & protein phosphorylation & 2.6E-07 \\ 
+   &  &  &  &  &  & GO:0071554 & cell wall organization or biogenesis & 3.3E-05 \\ 
+\hline 
+ lightcyan & 18.410 & 2886 & 0.158 & 0.277 & 0.053 & GO:1901293 & nucleoside phosphate biosynthetic process & 7.6E-53 \\ 
+   &  &  &  &  &  & GO:0009165 & nucleotide biosynthetic process & 4.0E-52 \\ 
+   &  &  &  &  &  & GO:0006221 & pyrimidine nucleotide biosynthetic process & 9.8E-41 \\ 
+   &  &  &  &  &  & GO:0006220 & pyrimidine nucleotide metabolic process & 9.8E-41 \\ 
+   &  &  &  &  &  & GO:0046390 & ribose phosphate biosynthetic process & 2.6E-40 \\ 
+\hline 
+ lightsteelblue1 & -0.078 & 73 & 0.109 & 0.517 & 0.103 & GO:0006897 & endocytosis & 6.2E-08 \\ 
+   &  &  &  &  &  & GO:0048268 & clathrin coat assembly & 6.8E-08 \\ 
+   &  &  &  &  &  & GO:0006901 & vesicle coating & 9.5E-08 \\ 
+   &  &  &  &  &  & GO:0016050 & vesicle organization & 1.3E-07 \\ 
+   &  &  &  &  &  & GO:0071822 & protein complex subunit organization & 3.6E-04 \\ 
+\hline 
+ magenta & 0.085 & 807 & 0.146 & 0.166 & 0.025 & GO:0006661 & phosphatidylinositol biosynthetic process & 5.9E-06 \\ 
+   &  &  &  &  &  & GO:0046488 & phosphatidylinositol metabolic process & 3.7E-05 \\ 
+   &  &  &  &  &  & GO:0046474 & glycerophospholipid biosynthetic process & 1.0E-04 \\ 
+   &  &  &  &  &  & GO:0006650 & glycerophospholipid metabolic process & 4.3E-04 \\ 
+   &  &  &  &  &  & GO:0045017 & glycerolipid biosynthetic process & 5.2E-04 \\ 
+\hline 
+\end{tabular}
+\end{table}
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|rrrrrlP{5cm}r|}
+  \hline
+Module & Z & N & \textit{N$_{e}$S} \textless 1& $\alpha$ & $\omega$ & GO Term & Description & p \\ 
+  \hline
+
+ mediumpurple3 & 13.539 & 74 & 0.173 & 0.326 & 0.074 & GO:0007017 & microtubule-based process & 1.4E-30 \\ 
+   &  &  &  &  &  & GO:0000911 & cytokinesis by cell plate formation & 7.0E-30 \\ 
+   &  &  &  &  &  & GO:0032506 & cytokinetic process & 1.3E-29 \\ 
+   &  &  &  &  &  & GO:1902410 & mitotic cytokinetic process & 1.3E-29 \\ 
+   &  &  &  &  &  & GO:1903047 & mitotic cell cycle process & 8.6E-27 \\ 
+\hline
+  midnightblue & 24.002 & 771 & 0.148 & 0.189 & 0.030 & GO:0010200 & response to chitin & 4.0E-50 \\ 
+   &  &  &  &  &  & GO:0010243 & response to organonitrogen compound & 4.0E-50 \\ 
+   &  &  &  &  &  & GO:1901698 & response to nitrogen compound & 3.2E-47 \\ 
+   &  &  &  &  &  & GO:0009719 & response to endogenous stimulus & 5.1E-40 \\ 
+   &  &  &  &  &  & GO:0010033 & response to organic substance & 1.7E-33 \\ 
+\hline 
+ plum1 & 10.286 & 98 & 0.200 & 0.361 & 0.101 & GO:0009620 & response to fungus & 3.3E-05 \\ 
+   &  &  &  &  &  & GO:0009723 & response to ethylene & 7.6E-04 \\ 
+   &  &  &  &  &  & GO:0051707 & response to other organism & 7.6E-04 \\ 
+   &  &  &  &  &  & GO:0051704 & multi-organism process & 8.9E-04 \\ 
+\hline  
+royalblue & 14.434 & 263 & 0.102 & 0.468 & 0.077 & GO:0055085 & transmembrane transport & 3.2E-04 \\ 
+   &  &  &  &  &  & GO:0005984 & disaccharide metabolic process & 4.5E-04 \\ 
+   &  &  &  &  &  & GO:0009311 & oligosaccharide metabolic process & 8.8E-04 \\ 
+\hline 
+ saddlebrown & 10.662 & 147 & 0.176 & 0.403 & 0.105 & GO:0006260 & DNA replication & 1.4E-11 \\ 
+   &  &  &  &  &  & GO:0006270 & DNA replication initiation & 1.9E-10 \\ 
+   &  &  &  &  &  & GO:0040029 & regulation of gene expression epigenetic & 3.4E-10 \\ 
+   &  &  &  &  &  & GO:0061647 & histone H3-K9 modification & 8.3E-10 \\ 
+   &  &  &  &  &  & GO:0051567 & histone H3-K9 methylation & 8.3E-10 \\ 
+\hline  
+sienna3 & 11.239 & 124 & 0.117 & 0.435 & 0.079 & GO:0044710 & single-organism metabolic process & 2.6E-07 \\ 
+   &  &  &  &  &  & GO:0016109 & tetraterpenoid biosynthetic process & 1.2E-06 \\ 
+   &  &  &  &  &  & GO:0016108 & tetraterpenoid metabolic process & 1.2E-06 \\ 
+   &  &  &  &  &  & GO:0016116 & carotenoid metabolic process & 1.2E-06 \\ 
+   &  &  &  &  &  & GO:0016117 & carotenoid biosynthetic process & 1.2E-06 \\ 
+\hline  
+
+\end{tabular}
+\end{table}
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|rrrrrlP{5cm}r|}
+  \hline
+Module & Z & N & \textit{N$_{e}$S} \textless 1& $\alpha$ & $\omega$ & GO Term & Description & p \\ 
+  \hline
+
+skyblue3 & 21.610 & 119 & 0.216 & -0.005 & -0.001 & GO:0009697 & salicylic acid biosynthetic process & 9.3E-12 \\ 
+   &  &  &  &  &  & GO:0009696 & salicylic acid metabolic process & 9.3E-12 \\ 
+   &  &  &  &  &  & GO:0009627 & systemic acquired resistance & 1.0E-11 \\ 
+   &  &  &  &  &  & GO:0046189 & phenol-containing compound biosynthetic process & 1.3E-11 \\ 
+   &  &  &  &  &  & GO:0018958 & phenol-containing compound metabolic process & 1.9E-11 \\ 
+\hline 
+ tan & 2.090 & 591 & 0.127 & 0.419 & 0.079 & GO:0045491 & xylan metabolic process & 9.0E-12 \\ 
+   &  &  &  &  &  & GO:0010410 & hemicellulose metabolic process & 1.5E-11 \\ 
+   &  &  &  &  &  & GO:0010413 & glucuronoxylan metabolic process & 5.7E-11 \\ 
+   &  &  &  &  &  & GO:0045492 & xylan biosynthetic process & 7.3E-11 \\ 
+   &  &  &  &  &  & GO:0070592 & cell wall polysaccharide biosynthetic process & 1.2E-10 \\ 
+\hline  
+turquoise & 6.411 & 4005 & 0.157 & 0.321 & 0.065 & GO:0006486 & protein glycosylation & 3.1E-14 \\ 
+   &  &  &  &  &  & GO:0043413 & macromolecule glycosylation & 3.1E-14 \\ 
+   &  &  &  &  &  & GO:0070085 & glycosylation & 4.2E-14 \\ 
+   &  &  &  &  &  & GO:0009630 & gravitropism & 1.8E-09 \\ 
+   &  &  &  &  &  & GO:0009606 & tropism & 1.8E-09 \\ 
+\hline 
+ yellowgreen & 10.232 & 120 & 0.148 & 0.531 & 0.147 & GO:0010200 & response to chitin & 1.2E-09 \\ 
+   &  &  &  &  &  & GO:0010243 & response to organonitrogen compound & 1.2E-09 \\ 
+   &  &  &  &  &  & GO:1901698 & response to nitrogen compound & 1.4E-09 \\ 
+   &  &  &  &  &  & GO:0006865 & amino acid transport & 3.4E-08 \\ 
+   &  &  &  &  &  & GO:0002679 & respiratory burst involved in defense response & 4.0E-08 \\ 
+   \hline
+\end{tabular}
+\caption{\textbf{Population genetics and GO enrichment information for each module} The top 5 enriched GO process terms are listed here for each module.}
+\label{table:t1}
+\end{table}
+
+\end{landscape}
 
 \begin{figure}[ht!]
       \centering

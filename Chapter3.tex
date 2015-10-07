@@ -15,7 +15,7 @@ Early eQTL studies mapped expression divergence between two lines, finding that 
 Here, we map local regulatory loci affecting expression in 99 members of a single large population of \textit{Capsella grandiflora} (Brassicaceae), an obligate outcrosser. As might be expected from its large Ne and relative lack of population structure, purifying and positive selection are strong in \textit{C. grandiflora}\citep{Williamson2014-tf,St_onge2011-jz}, making it an ideal system for investigating the maintenance of genetic variation in the face of selection 
 
 \section{Results and Discussion}
-We sequenced 22,895,738,517 100bp paired-end reads of DNA from 188 individuals, with a median of 119,321,591 reads per individual. Of these reads, a median of 93\% mapped per individual (range: 51\%-93\%, the two individuals with \textless 80\% were not sampled for RNAseq). We called 9,526,786 SNPs with a mean depth of 45 reads per individual. Linkage disequilibrium between SNPs decays rapidly: mean R2 between SNPs less than 10bp apart is 0.25, and this decays to 0.12 within 100bp (Fig.~\ref{fig:3figS1}). An analysis of population structure \citep{Raj2014-im} found that the maximum likelihood number of populations was K=1, suggesting no widespread structure. We measured genome-wide gene expression in 99 of these individuals using RNAseq from young leaf tissue, generating 4,988,540,400 100bp paired-end RNAseq reads with a median of 49,549,336 reads per individual (range: 42,627,096-106,283,910). Of these, a median of 94\% (range: 89-95\%) mapped to genes (Table S1). 
+We sequenced 22,895,738,517 100bp paired-end reads of DNA from 188 individuals, with a median of 119,321,591 reads per individual. Of these reads, a median of 93\% mapped per individual (range: 51\%-93\%, the two individuals with \textless 80\% were not sampled for RNAseq). We called 9,526,786 SNPs with a mean depth of 45 reads per individual. Linkage disequilibrium between SNPs decays rapidly: mean R2 between SNPs less than 10bp apart is 0.25, and this decays to 0.12 within 100bp (Fig.~\ref{fig:3figS1}). An analysis of population structure \citep{Raj2014-im} found that the maximum likelihood number of populations was K=1, suggesting no widespread structure. We measured genome-wide gene expression in 99 of these individuals using RNAseq from young leaf tissue, generating 4,988,540,400 100bp paired-end RNAseq reads with a median of 49,549,336 reads per individual (range: 42,627,096-106,283,910). Of these, a median of 94\% (range: 89-95\%) mapped to genes. 
 
 \begin{figure}[!ht]
       \centering
@@ -29,11 +29,11 @@ We mapped eQTLs by performing Mann-Whitney U tests comparing expression between 
 
 If eQTLs act in \textit{cis}, heterozygous eQTLs will cause allele-specific expression (ASE), providing an additional signature of regulatory variation. We measured ASE within individuals by calculating the mean expression difference between alleles, standardized for sequencing depth. We then mapped QTLs for ASE (‘aseQTLs’) by performing Mann-Whitney U tests comparing ASE in individuals that were homozygous at a local SNP and those that were heterozygous at that SNP (Fig.~\ref{fig:3fig1}). We excluded coding SNPs from this analysis because their genotype might confound ASE measurement. Out of 3,966,423 SNPS tested, 26,957 SNPs were significantly associated with ASE of 5,882 nearby genes (FDR = 0.1, p \textless 5.4 x 10$^{-4}$, Fig. ~\ref{fig:3figS1} B). Our analysis did not require a directional effect of SNP genotype on ASE, but 22,436 (83\%) of the noncoding SNPs associated with ASE have higher ASE in heterozygotes, as would be expected if these SNPs control expression in \textit{cis}. We selected the most strongly associated noncoding SNP per gene for further analysis and we also required that ASE had to be higher in heterozygotes at that SNP than homozygotes, leaving 4,580 aseQTLs (Fig.~\ref{fig:3figS2} B). 
 
-SNPs located near the transcription start site (TSS) and in 5’ UTRs were more likely to be eQTLs and aseQTLs than SNPs further away from the gene (Fig.~\ref{fig:3fig2}A), consistent with data from humans and Drosophila \citep{Massouras2012-wq,Pickrell2010-ci,Battle2014-ke}. In addition, CNSs near the TSS were enriched for eQTLs and aseQTLs relative to non-conserved sites (Fig.~\ref{fig:3fig2}A), suggesting that genetic variation within CNSs represents a major source of standing variation in gene expression, although bootstrapped confidence limits for these overlap slightly in aseQTLs. In contrast, CNSs in 5’UTRs were not enriched for eQTLs or aseQTLs, consistent with observations that selection strength is relatively similar in conserved and non-conserved sites in these regions\citep{Haudry2013-qe}. However, the detection of a large number of eQTLs outside of conserved regions suggests that regulatory element turnover is common in Brassicaceae (Table S2). There were 2,236 genes that had both eQTLs and aseQTLs, significantly more than expected by chance ($X^{2}$ = 471, p \textless 2.2x10-16). Of these 2,236 genes, 411 had the same SNP most significantly associated both with expression and ASE.
+SNPs located near the transcription start site (TSS) and in 5’ UTRs were more likely to be eQTLs and aseQTLs than SNPs further away from the gene (Fig.~\ref{fig:3fig2}A), consistent with data from humans and Drosophila \citep{Massouras2012-wq,Pickrell2010-ci,Battle2014-ke}. In addition, CNSs near the TSS were enriched for eQTLs and aseQTLs relative to non-conserved sites (Fig.~\ref{fig:3fig2}A), suggesting that genetic variation within CNSs represents a major source of standing variation in gene expression, although bootstrapped confidence limits for these overlap slightly in aseQTLs. In contrast, CNSs in 5’UTRs were not enriched for eQTLs or aseQTLs, consistent with observations that selection strength is relatively similar in conserved and non-conserved sites in these regions\citep{Haudry2013-qe}. However, the detection of a large number of eQTLs outside of conserved regions suggests that regulatory element turnover is common in Brassicaceae. There were 2,236 genes that had both eQTLs and aseQTLs, significantly more than expected by chance ($X^{2}$ = 471, p \textless 2.2x10-16). Of these 2,236 genes, 411 had the same SNP most significantly associated both with expression and ASE.
 
 \begin{figure}[ht!]
       \centering
-       \includegraphics[scale=0.8]{Ch3Fig2}
+       \includegraphics[width=\linewidth]{Ch3Fig2}
     \caption{\textbf{eQTL and aseQTL enrichments by site type.} The proportion of SNPs tested in each category that were found to be eQTLs is plotted on the y axis for (a) eQTLs and (b) aseQTLs. The exonic classes were determined by splitting the coding sequence of each gene into 5 equally sized pieces. Note that there were no exonic SNPs included in the aseQTL analysis. Error bars show the 95\% confidence intervals from bootstrapping.}
     \label{fig:3fig2}
 \end{figure}
@@ -53,7 +53,7 @@ We incorporated effect sizes to test for an additional signature of selection. T
 
 To avoid variation in power across allele frequency, we repeated the eQTL and aseQTL analysis, down-sampling our population to 50 individuals in each test, such that 40 individuals were drawn from the more common genotype and 10 individuals were drawn from the less common type for each SNP tested. As a consequence, for every SNP we test, sample sizes of major and minor genotype classes are equalized regardless of allele frequency in the population. We also measured effect sizes in this subsample to avoid any relationship between allele frequency and effect size estimation error. Despite reducing our sample size by half, we still detected 594 eQTLs and 670 aseQTLs, when using the most significantly associated SNP per gene (above a p-value threshold corresponding to FDR = 0.1; p \textless 2.6x10$^{-5}$ for eQTLs, p \textless 8.2x10$^{-5}$ for aseQTLs). In addition, we decoupled the identification of associations from the estimation of effect size by comparing allele frequencies of SNPs identified as eQTLs with these SNP’s effects on ASE, avoiding the double-testing issue responsible for winner’s curse.
 
-\begin{figure}[h]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch3Fig4}
     \caption{\textbf{The relationship between minor allele frequency and effect size.} (a) eQTL minor allele frequency is plotted against the effect of that SNP on ASE, calculated as the mean difference in ASE between individuals heterozygous at the eQTL and individuals homozygous at the eQTL. Negative values occur when the the homozygote for the eQTL has greater ASE than the heterozygote. The trend line is calculated by linear regression (b) aseQTL minor allele frequency plotted against the effect of the aseQTL on total gene expression, calculated by taking the log of the absolute value of the mean difference in expression between individuals heterozygous at the aseQTL and individuals homozygous for the common allele at the aseQTL. The trend line was calculated by regression between minor allele frequency and the log of the expression effect.}
@@ -64,10 +64,10 @@ Consistent with mutation-selection balance, an eQTL’s effect on ASE was negati
 
 We also investigated the allele frequency spectra of the eQTLs and aseQTLs detected using the downsampling approach. In this case it was appropriate to use the frequencies of all SNPs tested as a neutral hypothesis because false positive and false negative rates are independent of minor allele frequency. The minor allele frequencies of the eQTLs and aseQTLs detected with downsampling were rarer than the frequencies of all SNPs tested (Fig. ~\ref{fig:3fig5}). The skew towards rare alleles was stronger here than in the QTLs detected with the whole data set, perhaps because the reduced sample size of the downsampling approach allows us only to detect large effect QTLs, which are likely to be under stronger negative selection. 
 
-\begin{figure}[h]
+\begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch3Fig5}
-    \caption{\textbf{The site frequency spectra of QTLs detected in the frequency-controlled subsample. }}
+    \caption{\textbf{The site frequency spectra of QTLs detected in the frequency-controlled subsample.}}
     \label{fig:3fig5}
 \end{figure}
 
@@ -122,7 +122,7 @@ To control for recombination rate, we divided SNPs into those coming from high r
 \section{Acknowledgements}
 We thank Niroshini Epitawalage, Amanda Gorton, and Khaled Hazzouri for lab assistance, J. Paul Foxe for collection assistance, Wei Wang for computer assistance, and Aneil Agrawal, Graham Coop, Asher Cutter, Alan Moses, Adrian Platts, Tanja Slotte, and Robert Williamson for helpful suggestions. Thomas Bureau, Mathieu Blanchette, Daniel Schoen, Paul Harrison, Alan Moses, Adrian Platts, and Eef Harmsen contributed to the Value-directed Evolutionary Genomics Initiative (VEGI) grant (Genome Quebec/Genome Canada) which supported this work, along with an NSF Graduate Research Fellowship to EBJ (DGE-1048376), and NSERC Canada and CFI grants to JRS and SIW. 
 
-\section{Appendix: Supplementary figures and tables}
+\section{Appendix: Supplementary figures}
 
 \begin{figure}[ht]
       \centering
@@ -140,7 +140,7 @@ We thank Niroshini Epitawalage, Amanda Gorton, and Khaled Hazzouri for lab assis
 
 \begin{figure}[ht]
       \centering
-       \includegraphics[width=\linewidth]{Ch3FigS3}
+       \includegraphics[width=\linewidth]{Ch3Examples}
     \caption{\textbf{Example eQTL and aseQTL genes.} Manhattan plots for associations between SNPs and total expression (a and b) and ASE (c and d) for two genes, PAC:20895445 (a and c) and PAC:20904926 (b and d). Each black dot represents a SNP and is plotted by genomic position on the x axis and the negative log of the p value for association on the y axis. The gray line denotes the p value threshold corresponding to an FDR of 0.01. The gray boxes represent the exons of the gene. Note that PAC:20895445 is an ortholog of AT4G16250.1, PHYTOCHROME D and PAC:20904926 is an ortholog of ATG68185.1, a ubiquitin-like superfamily protein.}
     \label{fig:3figS3}
 \end{figure}
@@ -182,7 +182,7 @@ We thank Niroshini Epitawalage, Amanda Gorton, and Khaled Hazzouri for lab assis
 
 \begin{figure}[ht]
       \centering
-       \includegraphics[width=\linewidth]{Ch3FigS9}
+       \includegraphics[width=\linewidth]{Ch3Sim}
     \caption{\textbf{The site frequency spectrum of aseQTLs when genes with SNPs showing ASE bias are removed from the analysis.} Red dots are frequencies of aseQTLs, gray dots are frequencies for permuted aseQTLs and black lines show 95\% confidence intervals. }
     \label{fig:3figS9}
 \end{figure}

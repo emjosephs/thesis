@@ -65,6 +65,9 @@
 \usepackage{graphicx}
 \usepackage{natbib}
 \usepackage{pdflscape}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{dirtytalk}
 
 %% *** Add \usepackage declarations here. ***
 %% The standard packages `geometry' and `setspace' are already loaded by
@@ -200,6 +203,7 @@ Here are my Acknowledgements. Thanks everybody!
 \include{Chapter2}
 \include{Chapter3}
 \include{Chapter4}
+\include{Chapter5}
 
 %% This adds a line for the Bibliography in the Table of Contents.
 \addcontentsline{toc}{chapter}{Bibliography}
