@@ -20,7 +20,7 @@ We sequenced 22,895,738,517 100bp paired-end reads of DNA from 188 individuals, 
 \begin{figure}[!ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3Fig1}
-    \caption{\textbf{Detecting eQTLs and aseQTLs} (a) A gene model for an individual that is heterozygous at a regulatory locus (G/T) and at an informative coding site (A/T). The G allele increases expression relative to the C allele, (b) causing increased allelic expression of the reads carrying the A allele at the informative heterozygous site. We refer to this difference in allelic expression as “ASE”. (c) eQTLs are detected when there is a significant difference in total gene expression between individuals (represented by black circles) that are homozygous for the common allele of a SNP and individuals that are heterozygous at that SNP. (d) aseQTLs are detected when there is a significant difference in ASE between individuals that are heterozygous at a SNP and homozygous for either allele at that SNP.}
+    \caption{\textbf{Detecting eQTLs and aseQTLs} A) A gene model for an individual that is heterozygous at a regulatory locus (G/T) and at an informative coding site (A/T). The G allele increases expression relative to the C allele, B) causing increased allelic expression of the reads carrying the A allele at the informative heterozygous site. We refer to this difference in allelic expression as “ASE”. C) eQTLs are detected when there is a significant difference in total gene expression between individuals (represented by black circles) that are homozygous for the common allele of a SNP and individuals that are heterozygous at that SNP. D) aseQTLs are detected when there is a significant difference in ASE between individuals that are heterozygous at a SNP and homozygous for either allele at that SNP.}
     \label{fig:3fig1}
 \end{figure}
 
@@ -34,7 +34,7 @@ SNPs located near the transcription start site (TSS) and in 5’ UTRs were more 
 \begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch3Fig2}
-    \caption{\textbf{eQTL and aseQTL enrichments by site type.} The proportion of SNPs tested in each category that were found to be eQTLs is plotted on the y axis for (a) eQTLs and (b) aseQTLs. The exonic classes were determined by splitting the coding sequence of each gene into 5 equally sized pieces. Note that there were no exonic SNPs included in the aseQTL analysis. Error bars show the 95\% confidence intervals from bootstrapping.}
+    \caption{\textbf{eQTL and aseQTL enrichments by site type.} The proportion of SNPs tested in each category that were found to be eQTLs is plotted on the y axis for A) eQTLs and C) aseQTLs. The exonic classes were determined by splitting the coding sequence of each gene into 5 equally sized pieces. Note that there were no exonic SNPs included in the aseQTL analysis. Error bars show the 95\% confidence intervals from bootstrapping.}
     \label{fig:3fig2}
 \end{figure}
 
@@ -45,7 +45,7 @@ To generate an appropriate null distribution for QTL allele frequency, we permut
 \begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch3Fig3}
-    \caption{\textbf{The site frequency spectra of eQTLs and aseQTLs} Minor allele frequencies of (a) eQTLs and (b) aseQTLs for observed data (black circles) and permuted data (gray circles, black lines are 95\% confidence intervals).}
+    \caption{\textbf{The site frequency spectra of eQTLs and aseQTLs} Minor allele frequencies of A) eQTLs and B) aseQTLs for observed data (black circles) and permuted data (gray circles, black lines are 95\% confidence intervals).}
     \label{fig:3fig3}
 \end{figure}
 
@@ -56,7 +56,7 @@ To avoid variation in power across allele frequency, we repeated the eQTL and as
 \begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch3Fig4}
-    \caption{\textbf{The relationship between minor allele frequency and effect size.} (a) eQTL minor allele frequency is plotted against the effect of that SNP on ASE, calculated as the mean difference in ASE between individuals heterozygous at the eQTL and individuals homozygous at the eQTL. Negative values occur when the the homozygote for the eQTL has greater ASE than the heterozygote. The trend line is calculated by linear regression (b) aseQTL minor allele frequency plotted against the effect of the aseQTL on total gene expression, calculated by taking the log of the absolute value of the mean difference in expression between individuals heterozygous at the aseQTL and individuals homozygous for the common allele at the aseQTL. The trend line was calculated by regression between minor allele frequency and the log of the expression effect.}
+    \caption{\textbf{The relationship between minor allele frequency and effect size.} A) eQTL minor allele frequency is plotted against the effect of that SNP on ASE, calculated as the mean difference in ASE between individuals heterozygous at the eQTL and individuals homozygous at the eQTL. Negative values occur when the the homozygote for the eQTL has greater ASE than the heterozygote. The trend line is calculated by linear regression B) aseQTL minor allele frequency plotted against the effect of the aseQTL on total gene expression, calculated by taking the log of the absolute value of the mean difference in expression between individuals heterozygous at the aseQTL and individuals homozygous for the common allele at the aseQTL. The trend line was calculated by regression between minor allele frequency and the log of the expression effect.}
     \label{fig:3fig4}
 \end{figure}
 
@@ -127,42 +127,42 @@ We thank Niroshini Epitawalage, Amanda Gorton, and Khaled Hazzouri for lab assis
 \begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS1}
-    \caption{\textbf{Linkage disequilibrium in \textit{C. grandiflora}.} Linkage disequilibrium was calculated for all SNPs within 1 kb of each other on scaffold 2. 1\% of these pairs were randomly sampled for the above figure, which shows mean $r{^2}$ between pairs in 10bp bins.}
+    \caption{\textbf{Linkage disequilibrium in \textit{C. grandiflora}.} Linkage disequilibrium was calculated for all SNPs within 1kb of each other on scaffold 2. 1\% of these pairs were randomly sampled for the above figure, which shows mean $r{^2}$ between pairs in 10bp bins.}
     \label{fig:3figS1}
 \end{figure}
 
 \begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS2}
-    \caption{\textbf{The distribution of p values for all SNPs tested in eQTL analyses (a) and aseQTL analyses (b)}}
+    \caption{\textbf{The distribution of p values for all SNPs tested in A) eQTL analyses and B) aseQTL analyses}}
     \label{fig:3figS2}
 \end{figure}
 
 \begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3Examples}
-    \caption{\textbf{Example eQTL and aseQTL genes.} Manhattan plots for associations between SNPs and total expression (a and b) and ASE (c and d) for two genes, PAC:20895445 (a and c) and PAC:20904926 (b and d). Each black dot represents a SNP and is plotted by genomic position on the x axis and the negative log of the p value for association on the y axis. The gray line denotes the p value threshold corresponding to an FDR of 0.01. The gray boxes represent the exons of the gene. Note that PAC:20895445 is an ortholog of AT4G16250.1, PHYTOCHROME D and PAC:20904926 is an ortholog of ATG68185.1, a ubiquitin-like superfamily protein.}
+    \caption{\textbf{Example eQTL and aseQTL genes.} Manhattan plots for associations between SNPs and total expression (A and B) and ASE (C and D) for two genes, PAC:20895445 (A and C) and PAC:20904926 (B and D). Each black dot represents a SNP and is plotted by genomic position on the x axis and the negative log of the p value for association on the y axis. The gray line denotes the p value threshold corresponding to an FDR of 0.01. The gray boxes represent the exons of the gene. Note that PAC:20895445 is an ortholog of AT4G16250.1, PHYTOCHROME D and PAC:20904926 is an ortholog of ATG68185.1, a ubiquitin-like superfamily protein.}
     \label{fig:3figS3}
 \end{figure}
 
 \begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS4}
-    \caption{\textbf{The effect of designating a random associated SNP per gene as eQTL/aseQTL instead of the most associated SNP per gene.} The site frequency spectrum of eQTLs (a) and aseQTLs (b) for observed data (red circles) and permuted data (gray circles, black lines are 95\% confidence intervals) when a random SNP is chosen per gene to be an eQTL or aseQTL. The same eQTLs and aseQTLs are plotted in (c) and (d). In (c), eQTL minor allele frequency is plotted against the effect of that SNP on ASE, calculated as the mean difference in ASE between individuals heterozygous at the eQTL and individuals homozygous at the eQTL. Negative values occur when the the homozygote for the eQTL has greater ASE than the heterozygote. The black line is calculated by linear regression. In (d), aseQTL minor allele frequency plotted against the effect of the aseQTL on total gene expression, calculated by taking the log of the absolute value of the mean difference in expression between individuals heterozygous at the aseQTL and individuals homozygous for the common allele at the aseQTL. The trend line was calculated by regression between minor allele frequency and the log of the expression effect. }
+    \caption{\textbf{The effect of designating a random associated SNP per gene as eQTL/aseQTL instead of the most associated SNP per gene.} The site frequency spectrum of A) eQTLs and B) aseQTLs for observed data (red circles) and permuted data (gray circles, black lines are 95\% confidence intervals) when a random SNP is chosen per gene to be an eQTL or aseQTL. The same eQTLs and aseQTLs are plotted in C) and D). In C), eQTL minor allele frequency is plotted against the effect of that SNP on ASE, calculated as the mean difference in ASE between individuals heterozygous at the eQTL and individuals homozygous at the eQTL. Negative values occur when the the homozygote for the eQTL has greater ASE than the heterozygote. The black line is calculated by linear regression. In D), aseQTL minor allele frequency plotted against the effect of the aseQTL on total gene expression, calculated by taking the log of the absolute value of the mean difference in expression between individuals heterozygous at the aseQTL and individuals homozygous for the common allele at the aseQTL. The trend line was calculated by regression between minor allele frequency and the log of the expression effect. }
     \label{fig:3figS4}
 \end{figure}
 
 \begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS5}
-    \caption{\textbf{Tajima\textsc{\char13}s D of eQTLs and aseQTLs within site type, recombination rate, and substitution type.}(a) shows Tajima\textsc{\char13}s D for eQTLs of various categories. Red circles are the real data, gray circles show Tajima\textsc{\char13}s D for permuted eQTLs, and black lines show 95\% confidence intervals. Tajima\textsc{\char13}s D was used to summarize the site frequency spectra and make plots more readable than they would be if raw frequencies were plotted. The total number of eQTLs in each category is shown with the red numbers and the mean number of permuted eQTLs in each category is shown with the black numbers (b) shows the same data as (a) but for aseQTLs. (c) shows Tajima\textsc{\char13}s D for eQTLs and aseQTLs (red dots) and permuted eQTLs and aseQTLs (gray dots, black bars are 95\% confidence intervals) for sites in low recombination regions (\textless 3.45 cM/mB) and high recombination regions (\textgreater 3.45 cM/mB). (d) shows Tajima\textsc{\char13}s D for A/T to G/C substitutions that could be favored by gene conversion (‘conv’) and other substitutions (‘notconv’). Note that all Tajima\textsc{\char13}s D values are significantly increased because only SNPS above a certain allele frequency were testable, so that even for 4\-fold degenerate sites in the analysis, Tajima\textsc{\char13}s D is 2.403.}
+    \caption{\textbf{Tajima\textsc{\char13}s D of eQTLs and aseQTLs within site type, recombination rate, and substitution type.} A) Tajima\textsc{\char13}s D for eQTLs of various categories. Red circles are the real data, gray circles show Tajima\textsc{\char13}s D for permuted eQTLs, and black lines show 95\% confidence intervals. Tajima\textsc{\char13}s D was used to summarize the site frequency spectra and make plots more readable than they would be if raw frequencies were plotted. The total number of eQTLs in each category is shown with the red numbers and the mean number of permuted eQTLs in each category is shown with the black numbers. B) The same data as A) but for aseQTLs. C) Tajima\textsc{\char13}s D for eQTLs and aseQTLs (red dots) and permuted eQTLs and aseQTLs (gray dots, black bars are 95\% confidence intervals) for sites in low recombination regions (\textless 3.45 cM/mB) and high recombination regions (\textgreater 3.45 cM/mB). D) Tajima\textsc{\char13}s D for A/T to G/C substitutions that could be favored by gene conversion (‘conv’) and other substitutions (‘notconv’). Note that all Tajima\textsc{\char13}s D values are significantly increased because only SNPS above a certain allele frequency were testable, so that even for 4\-fold degenerate sites in the analysis, Tajima\textsc{\char13}s D is 2.403.}
     \label{fig:3figS5}
 \end{figure}
 
 \begin{figure}[ht]
       \centering
        \includegraphics[width=\linewidth]{Ch3FigS6}
-    \caption{\textbf{A comparison of mapping programs in highly polymorphic regions.}RNAseq coverage for an example gene using mapping from Tophat (top) and Stampy (bottom). Colored lines indicate polymorphic sites compared to the reference. The arrows indicate regions where coverage was reduced in Tophat because of multiple polymorphisms. Note that Tophat reads have splice junctions while Stampy reads do not because we mapped to an exon-only reference.}
+    \caption{\textbf{A comparison of mapping programs in highly polymorphic regions.} RNAseq coverage for an example gene using mapping from Tophat (top) and Stampy (bottom). Colored lines indicate polymorphic sites compared to the reference. The arrows indicate regions where coverage was reduced in Tophat because of multiple polymorphisms. Note that Tophat reads have splice junctions while Stampy reads do not because we mapped to an exon-only reference.}
     \label{fig:3figS6}
 \end{figure}
 

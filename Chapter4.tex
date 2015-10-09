@@ -29,7 +29,7 @@ Connectivity correlated negatively with  $d_{N}$ ($\rho$ = -0.167, p \textless 0
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=\linewidth]{Ch4Fig1}
-\caption{\textbf{Correlations between protein divergence, intramodular connectivity, and expression.} (A) $d_{N}/d_{S}$ correlates negatively with intramodular connectivity ($\rho$ = -0.127, p \textless 0.001). (B) $d_{N}/d_{S}$ correlates negatively with expression ($\rho$ = -0.261, p \textless 0.001). (B) Expression correlates positively with intramodular connectivity ($\rho$ = 0.289, p \textless 0.001)}
+\caption{\textbf{Correlations between protein divergence, intramodular connectivity, and expression.} A) $d_{N}/d_{S}$ correlates negatively with intramodular connectivity ($\rho$ = -0.127, p \textless 0.001). B) $d_{N}/d_{S}$ correlates negatively with expression ($\rho$ = -0.261, p \textless 0.001). C) Expression correlates positively with intramodular connectivity ($\rho$ = 0.289, p \textless 0.001)}
 \label{fig:f1}
 \end{figure}
 
@@ -67,7 +67,7 @@ In general, negative selection acted more strongly on genes with higher connecti
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=\linewidth]{Ch4Fig2}
-\caption{\textbf{ Estimates of negative and positive selection in genes of different connectivity categories.} A) The proportion of sites found in each bin of purifying selection strength, separated by connectivity category. B) The proportion of sites fixed by positive selection, and C) the rate of adaptive substitution. Error bars represent 95\% confidence intervals.}
+\caption{\textbf{Estimates of negative and positive selection in genes of different connectivity categories.} A) The proportion of sites found in each bin of purifying selection strength, separated by connectivity category. B) The proportion of sites fixed by positive selection, and C) the rate of adaptive substitution. Error bars represent 95\% confidence intervals.}
 \label{fig:f2}
 \end{figure}
 
@@ -123,7 +123,7 @@ We used leaf expression data from a population sample of 99 individuals of \text
 
 All sequence data was mapped using Stampy 1.0.21 \citep{Lunter2011-uc} with default settings to an exon-only reference \citep{Josephs2015-nx}. We measured expression level for each gene by counting the number of reads that mapped to each gene using the HTSeq.scripts.count feature from HTSeq and we normalized for sequencing depth by dividing by the median expression level for each individual \citep{Anders2015-qa}. We did not detect interactions between GC content, expression level, and lane \citep{Josephs2015-nx}. Genes with a median expression of 0 were removed from the analysis, leaving a total of 20,570 genes. For comparisons of expression level and divergence and selection we divided read count by gene length, measured as the number of nucleotides in the coding sequence, to make expression level comparable between genes.
 
-\subsection{Construction of Capsella grandiflora gene co-expression network}
+\subsection{Construction of \textit{Capsella grandiflora} gene co-expression network}
 The R package, WGCNA version 1.34, running under R version 2.15.1 \citep{r} was employed to construct gene coexpression networks for the \textit{C. grandiflora} expression data \citep{langfelder2008}. This analysis groups together genes with similar patterns of pairwise correlation of expression, patterns that in theory are expected to reflect a shared role within similar biologically meaningful functional pathways and processes. We were interested in retaining the information embodied in the sign of the gene expression correlations, so we conducted a signed network analysis using the following adjacency function: a$_{ij}$ = |0.5 + 0.5 x cor(x$_{i}$,x$_{j}$)|, where cor(x$_{i}$,x$_{j}$) is the correlation of gene expression of the i$^{th}$ and j$^{th}$ gene, and is the soft thresholding value. Soft thresholding is used in WGCNA, as it typically leads to co-expression networks that exhibit a scale-free degree distribution pattern of node connectivity, an inherent property of biological networks. 
 
 The \textit{C. grandiflora} gene co-expression networks were obtained using  a soft thresholding power of 12, as suggested by the authors of the WGCNA package for signed networks. Genes that exhibited similar patterns of connectivity (i.e., genes showing high “topological overlap”) were grouped together in the same coexpression modules, based on hierarchical clustering of topological overlap values, in which a dynamic branch-cutting algorithm was used to define initial gene co-expression modules \citep{langfelder2008}.  Module eigengenes (the first principal component of the gene expression values of modules) were calculated and modules whose eigengenes were highly correlated were merged to arrive at the final set of co-expression modules. The resulting modules were labeled with different colors for ease of referencing. A preliminary coexpression analysis showed that one individual was a strong outlier, so we removed it and reran the analysis on the remaining 146 individuals. Total connectivity for each gene was calculated as the sum of connection strengths between the focal gene and all other genes and intramodular connectivity was calculated as the sum of connections between the focal gene and all other genes in the same module. 
@@ -347,7 +347,7 @@ turquoise & 6.411 & 4005 & 0.157 & 0.321 & 0.065 & GO:0006486 & protein glycosyl
    &  &  &  &  &  & GO:0002679 & respiratory burst involved in defense response & 4.0E-08 \\ 
    \hline
 \end{tabular}
-\caption{\textbf{Population genetics and GO enrichment information for each module} The top 5 enriched GO process terms are listed here for each module.}
+\caption{\textbf{Population genetics and top 5 enriched GO process terms for each module.}}
 \label{table:t1}
 \end{table}
 
@@ -380,7 +380,7 @@ turquoise & 6.411 & 4005 & 0.157 & 0.321 & 0.065 & GO:0006486 & protein glycosyl
 \begin{figure}[ht!]
       \centering
        \includegraphics[width=\linewidth]{Ch4FigMod}
-    \caption{\textbf{ Within-module estimates of the correlation between intramodular connectivity and dN/dS depend on module size} A) The number of genes in a module (x-axis) plotted against the p value for significance of the correlation between connectivity and $d_{N}/d_{S}$ within that module (y-axis) B) THe number of genes in a module (x-axis) plotted against the slope of the relationship between connectivity and $d_{N}/d_{S}$ (y-axis) C) The relationship between (x-axis) and slope (y-axis) for within-module correlations of connectivity and $d_{N}/d_{S}$}
+    \caption{\textbf{Within-module estimates of the correlation between intramodular connectivity and dN/dS depend on module size} A) The number of genes in a module (x-axis) plotted against the p value for significance of the correlation between connectivity and $d_{N}/d_{S}$ within that module (y-axis). B) The number of genes in a module (x-axis) plotted against the slope of the relationship between connectivity and $d_{N}/d_{S}$ (y-axis). C) The relationship between (x-axis) and slope (y-axis) for within-module correlations of connectivity and $d_{N}/d_{S}$}
     \label{fig:fsMod}
 \end{figure}
 
